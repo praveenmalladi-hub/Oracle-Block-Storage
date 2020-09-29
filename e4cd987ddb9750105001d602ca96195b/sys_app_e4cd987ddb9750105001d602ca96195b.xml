@@ -17,10 +17,10 @@
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
-        <scope>x_snc_oracle_block</scope>
+        <scope>sn_oci_bs_spoke</scope>
         <scoped_administration>false</scoped_administration>
         <short_description/>
-        <source>x_snc_oracle_block</source>
+        <source>sn_oci_bs_spoke</source>
         <store_correlation_id/>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>

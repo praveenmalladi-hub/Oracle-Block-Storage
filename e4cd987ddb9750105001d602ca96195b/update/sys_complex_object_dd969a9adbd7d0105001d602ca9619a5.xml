@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD1d969a9a3bd7d01079f23a259bea65a5</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>e4cd987ddb9750105001d602ca96195b</scope_name>
+        <serialized_content>{"FlowDesigner:FD1d969a9a3bd7d01079f23a259bea65a5":{"$COCollectionField":[{"tag":{"name":"String","name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"},"value":"String","value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Freeform Tags\",\"mandatory\":\"false\",\"child_name\":\"tag\",\"uiUniqueId\":\"d69fc7f9-771e-453d-8e61-35059f46f37e\",\"uiTypeLabel\":\"String\",\"co_type_name\":\"FD1d969a9a3bd7d01079f23a259bea65a5\",\"child_label\":\"Tag\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"string\",\"child_type\":\"object\",\"order\":\"4\",\"max_length\":\"0\",\"child_uiUniqueId\":\"7c19581f-cb4c-49c2-8383-5c775ff60015\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD1d969a9a3bd7d01079f23a259bea65a5.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Freeform Tags\",\"mandatory\":\"false\",\"child_name\":\"tag\",\"uiUniqueId\":\"d69fc7f9-771e-453d-8e61-35059f46f37e\",\"uiTypeLabel\":\"String\",\"co_type_name\":\"FD1d969a9a3bd7d01079f23a259bea65a5\",\"child_label\":\"Tag\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"string\",\"child_type\":\"object\",\"order\":\"4\",\"max_length\":\"0\",\"child_uiUniqueId\":\"7c19581f-cb4c-49c2-8383-5c775ff60015\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-19 07:17:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dd969a9adbd7d0105001d602ca9619a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD1d969a9a3bd7d01079f23a259bea65a5</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_complex_object_dd969a9adbd7d0105001d602ca9619a5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-19 07:17:54</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

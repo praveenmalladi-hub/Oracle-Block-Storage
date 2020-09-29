@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDcec2310b2593541069ffbd26e6a069b1</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>e4cd987ddb9750105001d602ca96195b</scope_name>
+        <serialized_content>{"FlowDesigner:FDcec2310b2593541069ffbd26e6a069b1":{"$COCollectionField":["String"],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDcec2310b2593541069ffbd26e6a069b1.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Volume Backup IDs\",\"mandatory\":\"false\",\"child_name\":\"volumebackupid\",\"uiUniqueId\":\"5a8e2bd2-8b51-4f6e-8f74-f193cf78b3b4\",\"uiTypeLabel\":\"JSON\",\"co_type_name\":\"FDcec2310b2593541069ffbd26e6a069b1\",\"child_label\":\"Volume Backup ID\",\"child_type_label\":\"String\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"json\",\"child_type\":\"string\",\"order\":\"13\",\"max_length\":\"0\",\"child_uiUniqueId\":\"40d637ce-16b0-48c3-bd11-0b282577adca\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-21 12:36:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>82c2310b1b93541015dfdce7cc4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDcec2310b2593541069ffbd26e6a069b1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_complex_object_82c2310b1b93541015dfdce7cc4bcbb2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-21 12:36:56</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

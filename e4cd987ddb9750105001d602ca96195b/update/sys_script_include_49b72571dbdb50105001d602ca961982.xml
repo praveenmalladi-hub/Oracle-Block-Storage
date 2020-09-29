@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>sn_oci_bs_spoke.OracleBlockStorageErrorHandler</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>OracleBlockStorageErrorHandler</name>
+        <script><![CDATA[var OracleBlockStorageErrorHandler = Class.create();
+OracleBlockStorageErrorHandler.prototype = {
+    initialize: function() {},
+    errorHandler: function(responseBody, status_code) {
+        var msg = [];
+        try {
+            var responseJson = JSON.parse(responseBody);
+            msg[0] = 'Code: ' + responseJson.code + ' - ' + status_code + ' ' + responseJson.message;
+            msg[1] = 'Error';
+        } catch (ex) {
+            msg[0] = 'Issue in parsing Error response retrieved from API';
+            msg[1] = 'Error';
+        }
+        return msg;
+    },
+    type: 'OracleBlockStorageErrorHandler'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-17 14:39:59</sys_created_on>
+        <sys_id>49b72571dbdb50105001d602ca961982</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>OracleBlockStorageErrorHandler</sys_name>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_script_include_49b72571dbdb50105001d602ca961982</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-18 04:36:11</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>sn_oci_bs_spoke.OracleBlockStorageUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>OracleBlockStorageUtils</name>
+        <script><![CDATA[var OracleBlockStorageUtils = Class.create();
+OracleBlockStorageUtils.prototype = {
+    initialize: function() {},
+    validateInputVariables: function(inputs, outputs) {
+        for (var key in inputs) {
+            var value = inputs[key];
+            if (typeof value == 'string')
+                inputs[key] = value.trim();
+            else
+                inputs[key] = value;
+        }
+        return inputs;
+    },
+
+    validateMandatoryVariables: function(obj, keys) {
+        keys.forEach(function(key) {
+            if (!obj[key])
+                throw new Error("Error while executing, mandatory information isn't passed in " + key);
+        });
+    },
+
+    maptoOutputFromInput: function(inputs, outputs, keys) {
+        if (keys.length <= 0)
+            for (var key in inputs) {
+                outputs[key] = inputs[key];
+            } else {
+                keys.forEach(function(key) {
+                    outputs[key] = inputs[key];
+                });
+            }
+        return outputs;
+    },
+	createTagsPayload: function(inputTags) {
+        var tags = {};
+        inputTags.forEach(function(property) {
+            if (property.Name)
+                tags[property.Name] = property.Value;
+        });
+        return tags;
+    },
+	trimValues: function(inputArr) {
+        inputArr.forEach(function(inputArr) {
+            for (var key in inputArr) {
+                inputArr[key] = inputArr[key].trim();
+            }
+            return inputArr;
+        });
+
+    },
+	
+    type: 'OracleBlockStorageUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-17 14:25:20</sys_created_on>
+        <sys_id>a5b425bddb9b50105001d602ca9619ee</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>OracleBlockStorageUtils</sys_name>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_script_include_a5b425bddb9b50105001d602ca9619ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-19 07:11:03</sys_updated_on>
+    </sys_script_include>
+</record_update>

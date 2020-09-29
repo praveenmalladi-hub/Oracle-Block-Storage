@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="DELETE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Volume Group Management">96052d0f1b53541015dfdce7cc4bcb92</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>create_volume_group</internal_name>
+        <label_cache/>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>Create Volume Group</name>
+        <natlang/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-22 13:09:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c8c3071b1b93941015dfdce7cc4bcb3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Volume Group</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_c8c3071b1b93941015dfdce7cc4bcb3f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-22 13:09:10</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="DELETE" query="documentkey=c8c3071b1b93941015dfdce7cc4bcb3f"/>
+    <sys_variable_value action="DELETE" query="document_key=c8c3071b1b93941015dfdce7cc4bcb3f"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</application>
+        <file_path/>
+        <instance_id>c3885340dbd548903050ac44d49619c4</instance_id>
+        <instance_name>empmrakesh</instance_name>
+        <name>sys_hub_action_type_definition_c8c3071b1b93941015dfdce7cc4bcb3f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition"><sys_hub_action_type_definition action="INSERT_OR_UPDATE"><access>public</access><acls/><action_template/><active>true</active><annotation/><callable_by_client_api>false</callable_by_client_api><category display_value="Volume Group Management">96052d0f1b53541015dfdce7cc4bcb92</category><copied_from/><copied_from_name/><description/><ih_action>false</ih_action><internal_name>create_volume_group</internal_name><label_cache/><latest_snapshot/><master_snapshot/><name>Create Volume Group</name><natlang/><outputs/><state>draft</state><sys_class_name>sys_hub_action_type_definition</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-09-22 13:09:10</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c8c3071b1b93941015dfdce7cc4bcb3f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Create Volume Group</sys_name><sys_overrides/><sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package><sys_policy/><sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope><sys_update_name>sys_hub_action_type_definition_c8c3071b1b93941015dfdce7cc4bcb3f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-09-22 13:09:10</sys_updated_on><system_level>false</system_level><type/></sys_hub_action_type_definition><sys_translated_text action="delete_multiple" query="documentkey=c8c3071b1b93941015dfdce7cc4bcb3f"/><sys_variable_value action="delete_multiple" query="document_key=c8c3071b1b93941015dfdce7cc4bcb3f"/></record_update>]]></payload>
+        <payload_hash>95221215</payload_hash>
+        <record_name>Create Volume Group</record_name>
+        <reverted_from/>
+        <source>4b9e58bddb9750105001d602ca96195a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-22 13:09:10</sys_created_on>
+        <sys_id>84c3071b1b93941015dfdce7cc4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174b5eea8b20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-22 13:09:10</sys_updated_on>
+        <type>Action Type</type>
+        <update_guid>ccc3071b1d93941040874d81d09cf745</update_guid>
+        <update_guid_history>ccc3071b1d93941040874d81d09cf745:95221215</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-22 13:14:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_action_type_definition">sys_hub_action_type_definition</sys_db_object>
+        <sys_id>11ad16e5f8434aa5b4aa8962504c5449</sys_id>
+        <sys_metadata>c8c3071b1b93941015dfdce7cc4bcb3f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Volume Group</sys_name>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_scope_delete display_value="">789f961519b2429c9a23818a6cb05b71</sys_scope_delete>
+        <sys_update_name>sys_hub_action_type_definition_c8c3071b1b93941015dfdce7cc4bcb3f</sys_update_name>
+        <sys_update_version display_value="sys_hub_action_type_definition_c8c3071b1b93941015dfdce7cc4bcb3f">84c3071b1b93941015dfdce7cc4bcb46</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-22 13:14:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
