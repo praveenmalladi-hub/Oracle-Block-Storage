@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>doctest</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>doctest</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-30 14:42:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8fe5a0c6db6f10105001d602ca9619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>doctest</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_hub_flow_8fe5a0c6db6f10105001d602ca9619b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-30 14:42:55</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=8fe5a0c6db6f10105001d602ca9619b9"/>
+    <sys_variable_value action="DELETE" query="document_key=8fe5a0c6db6f10105001d602ca9619b9"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=8fe5a0c6db6f10105001d602ca9619b9^sys_idNOT INcfe5a0c6db6f10105001d602ca9619bc"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>8fe5a0c6db6f10105001d602ca9619b9</id>
+        <name>doctest</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-30 14:42:55</sys_created_on>
+        <sys_id>cfe5a0c6db6f10105001d602ca9619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-30 14:42:55</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</application>
+        <file_path/>
+        <instance_id>c3885340dbd548903050ac44d49619c4</instance_id>
+        <instance_name>empmrakesh</instance_name>
+        <name>sys_hub_flow_8fe5a0c6db6f10105001d602ca9619b9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow"><sys_hub_flow action="INSERT_OR_UPDATE"><access>public</access><acls/><active>false</active><annotation/><callable_by_client_api>false</callable_by_client_api><category/><compiler_build/><copied_from/><copied_from_name/><description/><internal_name>doctest</internal_name><label_cache>[]</label_cache><latest_snapshot/><master_snapshot/><name>doctest</name><natlang/><outputs/><remote_trigger_id/><run_as>user</run_as><run_with_roles/><sc_callable>false</sc_callable><show_draft_actions>false</show_draft_actions><show_triggered_flows>false</show_triggered_flows><status>draft</status><sys_class_name>sys_hub_flow</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-09-30 14:42:55</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>8fe5a0c6db6f10105001d602ca9619b9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>doctest</sys_name><sys_overrides/><sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package><sys_policy/><sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope><sys_update_name>sys_hub_flow_8fe5a0c6db6f10105001d602ca9619b9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-09-30 14:42:55</sys_updated_on><type>flow</type></sys_hub_flow><sys_translated_text action="delete_multiple" query="documentkey=8fe5a0c6db6f10105001d602ca9619b9"/><sys_variable_value action="delete_multiple" query="document_key=8fe5a0c6db6f10105001d602ca9619b9"/><sys_flow_cat_variable_model action="delete_multiple" query="id=8fe5a0c6db6f10105001d602ca9619b9^sys_idNOT INcfe5a0c6db6f10105001d602ca9619bc"/><sys_flow_cat_variable_model action="INSERT_OR_UPDATE"><id>8fe5a0c6db6f10105001d602ca9619b9</id><name>doctest</name><sys_created_by>admin</sys_created_by><sys_created_on>2020-09-30 14:42:55</sys_created_on><sys_id>cfe5a0c6db6f10105001d602ca9619bc</sys_id><sys_mod_count>0</sys_mod_count><sys_scope/><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-09-30 14:42:55</sys_updated_on></sys_flow_cat_variable_model></record_update>]]></payload>
+        <payload_hash>1546966407</payload_hash>
+        <record_name>doctest</record_name>
+        <reverted_from/>
+        <source>4b9e58bddb9750105001d602ca96195a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-30 14:42:56</sys_created_on>
+        <sys_id>97e5e8c6db6f10105001d602ca96192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174df775dbb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-30 14:42:56</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>dfe5e8c6396f1010f10a342b8c6cb52d</update_guid>
+        <update_guid_history>dfe5e8c6396f1010f10a342b8c6cb52d:1546966407</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-07 12:48:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>00480bcb61604b0a800e4ddf73a94544</sys_id>
+        <sys_metadata>8fe5a0c6db6f10105001d602ca9619b9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>doctest</sys_name>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_scope_delete display_value="">789f961519b2429c9a23818a6cb05b71</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_8fe5a0c6db6f10105001d602ca9619b9</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_8fe5a0c6db6f10105001d602ca9619b9">97e5e8c6db6f10105001d602ca96192e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-07 12:48:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
