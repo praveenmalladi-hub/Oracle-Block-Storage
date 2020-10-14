@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD8734828a6ebf1c10a876a2f94814d5e8</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>e4cd987ddb9750105001d602ca96195b</scope_name>
+        <serialized_content>{"FlowDesigner:FD8734828a6ebf1c10a876a2f94814d5e8":{"$COCollectionField":[{"schedule":{"id":"String","id.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"ID\",\"mandatory\":\"true\",\"order\":\"11\",\"max_length\":\"0\",\"uiUniqueId\":\"1c9f2de2-9b7d-49a1-abca-bf162e54e6a6\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"schedules\",\"mandatory\":\"true\",\"child_name\":\"schedule\",\"uiUniqueId\":\"29d8be68-24b6-4149-b633-09ce272ff26d\",\"uiTypeLabel\":\"JSON\",\"co_type_name\":\"FD8734828a6ebf1c10a876a2f94814d5e8\",\"child_label\":\"schedule\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"json\",\"child_type\":\"object\",\"order\":\"10\",\"max_length\":\"0\",\"child_uiUniqueId\":\"a5e2033b-d908-40f4-9d0d-ef0af80fb09b\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD8734828a6ebf1c10a876a2f94814d5e8.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"schedules\",\"mandatory\":\"true\",\"child_name\":\"schedule\",\"uiUniqueId\":\"29d8be68-24b6-4149-b633-09ce272ff26d\",\"uiTypeLabel\":\"JSON\",\"co_type_name\":\"FD8734828a6ebf1c10a876a2f94814d5e8\",\"child_label\":\"schedule\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"json\",\"child_type\":\"object\",\"order\":\"10\",\"max_length\":\"0\",\"child_uiUniqueId\":\"a5e2033b-d908-40f4-9d0d-ef0af80fb09b\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-13 07:50:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4b34828a1bbf1c1015dfdce7cc4bcbe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD8734828a6ebf1c10a876a2f94814d5e8</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_complex_object_4b34828a1bbf1c1015dfdce7cc4bcbe8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-13 07:50:39</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

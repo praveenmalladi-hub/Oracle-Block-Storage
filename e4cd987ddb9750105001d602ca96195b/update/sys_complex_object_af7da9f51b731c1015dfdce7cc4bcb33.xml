@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDeb7da9f539731c104cf3d180fcc65c33</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>e4cd987ddb9750105001d602ca96195b</scope_name>
+        <serialized_content>{"FlowDesigner:FDeb7da9f539731c104cf3d180fcc65c33":{"period":"String","period.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"ONE_MONTH\",\"label\":\"Period\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"32\"}"},"dayOfMonth":"Integer","dayOfMonth.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Day Of Month\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"hourOfDay":"Integer","hourOfDay.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Hour Of Day\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"offsetType":"String","offsetType.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"STRUCTURED\",\"label\":\"Offset Type\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"32\"}"},"timeZone":"String","timeZone.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Choice\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"choice\",\"default_value\":\"UTC\",\"label\":\"Time Zone\",\"mandatory\":\"false\",\"order\":\"7\",\"max_length\":\"32\"}","SimpleChoiceFacet":"{\"complex_choice_map_key$\":{},\"choice_map_key$\":{\"UTC\":\"{\\\"label\\\":\\\"UTC\\\",\\\"value\\\":\\\"UTC\\\",\\\"order\\\":1}\",\"Regional Data Center Time\":\"{\\\"label\\\":\\\"Regional Data Center Time\\\",\\\"value\\\":\\\"REGIONAL_DATA_CENTER_TIME\\\",\\\"order\\\":2}\"}}"},"retentionSeconds":"Integer","retentionSeconds.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Retention Seconds\",\"mandatory\":\"false\",\"order\":\"6\",\"max_length\":\"0\"}"},"backupType":"String","backupType.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Choice\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"choice\",\"default_value\":\"FULL\",\"label\":\"Backup Type\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"32\"}","SimpleChoiceFacet":"{\"complex_choice_map_key$\":{},\"choice_map_key$\":{\"Incremental\":\"{\\\"label\\\":\\\"Incremental\\\",\\\"value\\\":\\\"INCREMENTAL\\\",\\\"order\\\":2}\",\"Full\":\"{\\\"label\\\":\\\"Full\\\",\\\"value\\\":\\\"FULL\\\",\\\"order\\\":1}\"}}"}},"FlowDesigner:FDeb7da9f539731c104cf3d180fcc65c33.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Monthly Schedule\",\"mandatory\":\"false\",\"uiUniqueId\":\"955ac8ca-4fe5-4e85-a03f-c7ad39200df5\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDeb7da9f539731c104cf3d180fcc65c33\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"7\",\"max_length\":\"65000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-12 11:32:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>af7da9f51b731c1015dfdce7cc4bcb33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDeb7da9f539731c104cf3d180fcc65c33</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_complex_object_af7da9f51b731c1015dfdce7cc4bcb33</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-12 11:32:49</sys_updated_on>
+        <type>complex_object_schema</type>
+    </sys_complex_object>
+</record_update>

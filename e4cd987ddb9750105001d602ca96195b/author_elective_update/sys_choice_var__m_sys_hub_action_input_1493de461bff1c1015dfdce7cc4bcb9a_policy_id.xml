@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="policy_id" table="var__m_sys_hub_action_input_1493de461bff1c1015dfdce7cc4bcb9a" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>policy_id</element>
+            <name>var__m_sys_hub_action_input_1493de461bff1c1015dfdce7cc4bcb9a</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 09:10:58</sys_created_on>
+            <sys_id>a7965a0a1bff1c1015dfdce7cc4bcb88</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 09:10:58</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>policy_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>testfortest</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_1493de461bff1c1015dfdce7cc4bcb9a</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 09:15:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7687d64a1bff1c1015dfdce7cc4bcb92</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 09:15:01</sys_updated_on>
+            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaa2vxtybj4jmutqxbusgqjyuqkocqg52eymhdswpzrud63cbtny26q</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>policy_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_1493de461bff1c1015dfdce7cc4bcb9a</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 09:10:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6f965a0a1bff1c1015dfdce7cc4bcb87</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 09:10:58</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>policy_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>policy1</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_1493de461bff1c1015dfdce7cc4bcb9a</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 09:15:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0f87d64a1bff1c1015dfdce7cc4bcb93</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 09:15:02</sys_updated_on>
+            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaak5byiefu4q2k5j53tj7kvb6u7kvslvjug2eg5l356y54e6lrgdya</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

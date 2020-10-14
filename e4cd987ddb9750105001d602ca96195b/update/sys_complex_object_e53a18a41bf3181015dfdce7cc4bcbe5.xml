@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD253a18a46ef31810bb652bbb4062dee5</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>e4cd987ddb9750105001d602ca96195b</scope_name>
+        <serialized_content>{"FlowDesigner:FD253a18a46ef31810bb652bbb4062dee5":{"$COCollectionField":[{"Object":{}}],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD253a18a46ef31810bb652bbb4062dee5.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"79decbbe-dff5-47eb-9f7a-1aa7910e3765\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Schedules\",\"mandatory\":\"false\",\"child_name\":\"schedule\",\"uiUniqueId\":\"2da350bd-8848-4883-b200-9895447ca6f6\",\"uiTypeLabel\":\"\",\"co_type_name\":\"FD253a18a46ef31810bb652bbb4062dee5\",\"child_label\":\"schedule\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"b1c16afb-122a-4a60-a8aa-83b41cd5f5ff\",\"sourceType\":\"step\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"10\",\"max_length\":\"0\",\"child_uiUniqueId\":\"24d9ead5-41fe-4f0a-8795-4f7d92a41613\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-08 08:16:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e53a18a41bf3181015dfdce7cc4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD253a18a46ef31810bb652bbb4062dee5</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_complex_object_e53a18a41bf3181015dfdce7cc4bcbe5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-08 08:16:33</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

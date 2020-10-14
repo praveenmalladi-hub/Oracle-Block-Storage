@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="policy_id" table="var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>policy_id</element>
+            <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-08 08:02:19</sys_created_on>
+            <sys_id>1df698e01bf3181015dfdce7cc4bcb0c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-08 08:02:19</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>policy_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>policy1</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 05:10:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a5af190e1b3f1c1015dfdce7cc4bcb9b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
+            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaak5byiefu4q2k5j53tj7kvb6u7kvslvjug2eg5l356y54e6lrgdya</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>policy_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-08 08:02:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d1f698e01bf3181015dfdce7cc4bcb0c</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>policy_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>WeekendPolicy</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 05:10:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6daf190e1b3f1c1015dfdce7cc4bcb9c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
+            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaatxzwowem3n6h52aclj4recyjsaszultbmqicb4nqo4nq2gcgfhhq</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>policy_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>WeekendPolicy</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 05:10:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2daf190e1b3f1c1015dfdce7cc4bcb9d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
+            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaazqc7eqeacg55hi5a7juhmxgnqqbo6plwmjpn46k5rdxseg34jn3a</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

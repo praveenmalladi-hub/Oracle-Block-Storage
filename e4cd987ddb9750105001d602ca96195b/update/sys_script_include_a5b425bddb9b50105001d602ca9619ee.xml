@@ -39,7 +39,7 @@ OracleBlockStorageUtils.prototype = {
             }
         return outputs;
     },
-	createTagsPayload: function(inputTags) {
+    createTagsPayload: function(inputTags) {
         var tags = {};
         inputTags.forEach(function(property) {
             if (property.Name)
@@ -47,7 +47,7 @@ OracleBlockStorageUtils.prototype = {
         });
         return tags;
     },
-	trimValues: function(inputArr) {
+    trimValues: function(inputArr) {
         inputArr.forEach(function(inputArr) {
             for (var key in inputArr) {
                 inputArr[key] = inputArr[key].trim();
@@ -56,20 +56,57 @@ OracleBlockStorageUtils.prototype = {
         });
 
     },
-	
+    ValidatePayload: function(obj) {
+        if (obj.offsetType == "STRUCTURED") {
+            if (obj.period == "ONE_DAY") {
+                delete obj.month;
+                delete obj.offsetSeconds;
+                delete obj.dayOfMonth;
+                delete obj.dayOfWeek;
+                return obj;
+            }
+            if (obj.period == "ONE_WEEK") {
+                delete obj.month;
+                delete obj.offsetSeconds;
+                delete obj.dayOfMonth;
+                return obj;
+
+            }
+            if (obj.period == "ONE_MONTH") {
+                delete obj.month;
+                delete obj.offsetSeconds;
+                delete obj.dayOfWeek;
+                return obj;
+
+            }
+            if (obj.period == "ONE_YEAR") {
+                delete obj.offsetSeconds;
+                delete obj.dayOfWeek;
+                return obj;
+
+            }
+        }
+        if (obj.offsetType == "NUMERIC_SECONDS") {
+            delete obj.month;
+            delete obj.dayOfMonth;
+            delete obj.dayOfWeek;
+            delete obj.hourOfDay;
+            return obj;
+        }
+    },
     type: 'OracleBlockStorageUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-17 14:25:20</sys_created_on>
         <sys_id>a5b425bddb9b50105001d602ca9619ee</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>OracleBlockStorageUtils</sys_name>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name>sys_script_include_a5b425bddb9b50105001d602ca9619ee</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-19 07:11:03</sys_updated_on>
+        <sys_updated_on>2020-10-13 07:11:59</sys_updated_on>
     </sys_script_include>
 </record_update>
