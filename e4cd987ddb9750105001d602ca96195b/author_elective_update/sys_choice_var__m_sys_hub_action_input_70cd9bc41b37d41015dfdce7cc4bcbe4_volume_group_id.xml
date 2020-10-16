@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="volume_group_id" table="var__m_sys_hub_action_input_70cd9bc41b37d41015dfdce7cc4bcbe4" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>volume_group_id</element>
+            <name>var__m_sys_hub_action_input_70cd9bc41b37d41015dfdce7cc4bcbe4</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-16 10:12:11</sys_created_on>
+            <sys_id>ad610e07dbf750505001d602ca9619bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name/>
+            <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-16 10:12:11</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>volume_group_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_70cd9bc41b37d41015dfdce7cc4bcbe4</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-16 10:12:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>65610e07dbf750505001d602ca9619bf</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-16 10:12:27</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>volume_group_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Volume Group1</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_70cd9bc41b37d41015dfdce7cc4bcbe4</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-16 10:12:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>25610e07dbf750505001d602ca9619c1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-16 10:12:27</sys_updated_on>
+            <value>ocid1.volumegroup.oc1.ap-mumbai-1.abrg6ljrojq7yxkqcgek7zdvobvtzhflkqj5ujp52oarfzpv2ttfuigkoj4a</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>volume_group_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Group1</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_70cd9bc41b37d41015dfdce7cc4bcbe4</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-16 10:12:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a9610e07dbf750505001d602ca9619ce</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-16 10:12:27</sys_updated_on>
+            <value>ocid1.volumegroup.oc1.ap-mumbai-1.abrg6ljrsooj2lwyps5rnol3mwnsqipxgdpar7o4ul35t5wmitum3zpsueha</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>volume_group_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Group Test</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_70cd9bc41b37d41015dfdce7cc4bcbe4</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-16 10:12:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>69610e07dbf750505001d602ca9619cf</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-16 10:12:27</sys_updated_on>
+            <value>ocid1.volumegroup.oc1.ap-mumbai-1.abrg6ljrvovpycdgg6wgghhca3weguts64ldriyypwdnbalib7hg2lq2g6gq</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

@@ -6,14 +6,20 @@
         <active>true</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category display_value="Volume Group Management">96052d0f1b53541015dfdce7cc4bcb92</category>
+        <category display_value="Volume Backup Policy Management">f70b6b501b73181015dfdce7cc4bcbad</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Retrieves details of the specified volume backup policy.&lt;/p&gt; 
+&lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - The OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Policy ID&lt;/b&gt; - OCID of the volume backup policy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt; &lt;li&gt;&lt;b&gt;Volume Backup Policy ID&lt;/b&gt; - OCID of the volume backup policy.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name &lt;/b&gt; - Name of the volume.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Time Created &lt;/b&gt; - Date and time the volume backup policy was created.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Lifecycle State &lt;/b&gt; - Current state of the volume backup policy.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Destination Region&lt;/b&gt; - The paired destination region for copying scheduled backups to.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Defined Tags&lt;/b&gt; - Defined tags for this resource.&lt;/li&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Free-form Tags&lt;/b&gt; - Free-form tags for this resource.&lt;/li&gt;&lt;li&gt;&lt;b&gt;schedules&lt;/b&gt; - Complex object containing the details of the schedule.&lt;/li&gt;
+&lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>true</ih_action>
         <internal_name>get_volume_backup_policy</internal_name>
         <label_cache>[{"name":"{{action.volume}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{action.volumegroupid}}","label":"action➛volumeGroupId","type":"action","ref":""},{"name":"{{action.volume_group_id}}","label":"action➛Volume Group ID","type":"action","ref":""},{"name":"{{action.policy_id}}","label":"action➛Policy ID","type":"action","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume}}","label":"step➛Pre Processing➛volume","type":"step","ref":""},{"name":"{{step[7f904806-1007-4077-aa72-9480d257782b].status_code}}","label":"step➛Get Volume Backup Policy➛Status Code","type":"step","ref":""},{"name":"{{step[7f904806-1007-4077-aa72-9480d257782b].response_body}}","label":"step➛Get Volume Backup Policy➛Response Body","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].availability}}","label":"step➛Post Processing➛availability","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].availabilitydomain}}","label":"step➛Post Processing➛availabilitydomain","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].volumegroupid}}","label":"step➛Post Processing➛volumegroupid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sizeingbs}}","label":"step➛Post Processing➛sizeingbs","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable10}}","label":"step➛Post Processing➛variable10","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].definedtags}}","label":"step➛Post Processing➛definedtags","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].freeformtags}}","label":"step➛Post Processing➛freeformtags","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volumeid}}","label":"step➛Pre Processing➛volumeid","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume_group_id}}","label":"step➛Pre Processing➛volume_group_id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sourcedetails}}","label":"step➛Post Processing➛sourcedetails","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].policyid}}","label":"step➛Pre Processing➛policyid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].destinationregion}}","label":"step➛Post Processing➛destinationregion","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules}}","label":"step➛Post Processing➛schedules","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule}}","label":"step➛Post Processing➛schedules➛schedule","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child1}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child1","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule._}}","label":"step➛Post Processing➛schedules➛schedule","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Backup_Type}}","label":"step➛Post Processing➛schedules➛schedule➛Backup Type","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.backupType}}","label":"step➛Post Processing➛schedules➛schedule➛Backup Type","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child2}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child2","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Period}}","label":"step➛Post Processing➛schedules➛schedule➛Period","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.period}}","label":"step➛Post Processing➛schedules➛schedule➛Period","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child3}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child3","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Hour_Of_Day}}","label":"step➛Post Processing➛schedules➛schedule➛Hour Of Day","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.hourOfDay}}","label":"step➛Post Processing➛schedules➛schedule➛Hour Of Day","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child4}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child4","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Day_Of_Week}}","label":"step➛Post Processing➛schedules➛schedule➛Day Of Week","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.dayOfWeek}}","label":"step➛Post Processing➛schedules➛schedule➛Day Of Week","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child5}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child5","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Day_Of_Month}}","label":"step➛Post Processing➛schedules➛schedule➛Day Of Month","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.dayOfMonth}}","label":"step➛Post Processing➛schedules➛schedule➛Day Of Month","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child6}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child6","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Month}}","label":"step➛Post Processing➛schedules➛schedule➛Month","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.month}}","label":"step➛Post Processing➛schedules➛schedule➛Month","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child7}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child7","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Retention_Seconds}}","label":"step➛Post Processing➛schedules➛schedule➛Retention Seconds","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.retentionSeconds}}","label":"step➛Post Processing➛schedules➛schedule➛Retention Seconds","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child8}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child8","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Time_Zone}}","label":"step➛Post Processing➛schedules➛schedule➛Time Zone","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>9baf990e1b3f1c1015dfdce7cc4bcb5a</latest_snapshot>
+        <latest_snapshot>f12bd28fdb3b50505001d602ca9619fd</latest_snapshot>
         <master_snapshot>8f3f75f81bf3581015dfdce7cc4bcb8f</master_snapshot>
         <name>Get Volume Backup Policy</name>
         <natlang/>
@@ -26,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d68a3f5c1b73181015dfdce7cc4bcbed</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Get Volume Backup Policy</sys_name>
         <sys_overrides/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
@@ -34,7 +40,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_d68a3f5c1b73181015dfdce7cc4bcbed</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-13 05:11:04</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:04:53</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -2056,9 +2062,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-08 08:00:09</sys_created_on>
         <sys_id>557690e01bf3181015dfdce7cc4bcb7a</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:04:36</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=557690e01bf3181015dfdce7cc4bcb7a"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4629,27 +4635,8 @@
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed^sys_idNOT INa5af190e1b3f1c1015dfdce7cc4bcb9b,d1f698e01bf3181015dfdce7cc4bcb0c,6daf190e1b3f1c1015dfdce7cc4bcb9c,2daf190e1b3f1c1015dfdce7cc4bcb9d,da8a3f5c1b73181015dfdce7cc4bcbfb"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed^sys_idNOT INd1f698e01bf3181015dfdce7cc4bcb0c,a5af190e1b3f1c1015dfdce7cc4bcb9b,6daf190e1b3f1c1015dfdce7cc4bcb9c,2daf190e1b3f1c1015dfdce7cc4bcb9d,da8a3f5c1b73181015dfdce7cc4bcbfb"/>
     <sys_choice field="policy_id" table="var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed">
-        <sys_choice action="INSERT_OR_UPDATE">
-            <dependent_value/>
-            <element>policy_id</element>
-            <hint/>
-            <inactive>false</inactive>
-            <label>policy1</label>
-            <language>en</language>
-            <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
-            <sequence>0</sequence>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2020-10-13 05:10:49</sys_created_on>
-            <sys_domain>global</sys_domain>
-            <sys_domain_path>/</sys_domain_path>
-            <sys_id>a5af190e1b3f1c1015dfdce7cc4bcb9b</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
-            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaak5byiefu4q2k5j53tj7kvb6u7kvslvjug2eg5l356y54e6lrgdya</value>
-        </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>policy_id</element>
@@ -4658,15 +4645,15 @@
             <label>-- None --</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
-            <sequence>1</sequence>
+            <sequence>0</sequence>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2020-10-08 08:02:19</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>d1f698e01bf3181015dfdce7cc4bcb0c</sys_id>
-            <sys_mod_count>2</sys_mod_count>
+            <sys_mod_count>3</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
+            <sys_updated_on>2020-10-14 08:36:37</sys_updated_on>
             <value/>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -4674,7 +4661,7 @@
             <element>policy_id</element>
             <hint/>
             <inactive>false</inactive>
-            <label>WeekendPolicy</label>
+            <label>policy1</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
             <sequence>1</sequence>
@@ -4682,11 +4669,11 @@
             <sys_created_on>2020-10-13 05:10:49</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>6daf190e1b3f1c1015dfdce7cc4bcb9c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_id>a5af190e1b3f1c1015dfdce7cc4bcb9b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
-            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaatxzwowem3n6h52aclj4recyjsaszultbmqicb4nqo4nq2gcgfhhq</value>
+            <sys_updated_on>2020-10-14 08:36:37</sys_updated_on>
+            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaak5byiefu4q2k5j53tj7kvb6u7kvslvjug2eg5l356y54e6lrgdya</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -4701,10 +4688,29 @@
             <sys_created_on>2020-10-13 05:10:49</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>2daf190e1b3f1c1015dfdce7cc4bcb9d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_id>6daf190e1b3f1c1015dfdce7cc4bcb9c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2020-10-13 05:10:49</sys_updated_on>
+            <sys_updated_on>2020-10-14 08:36:37</sys_updated_on>
+            <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaatxzwowem3n6h52aclj4recyjsaszultbmqicb4nqo4nq2gcgfhhq</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>policy_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>WeekendPolicy</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_d68a3f5c1b73181015dfdce7cc4bcbed</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-13 05:10:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2daf190e1b3f1c1015dfdce7cc4bcb9d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-14 08:36:37</sys_updated_on>
             <value>ocid1.volumebackuppolicy.oc1.ap-mumbai-1.aaaaaaaazqc7eqeacg55hi5a7juhmxgnqqbo6plwmjpn46k5rdxseg34jn3a</value>
         </sys_choice>
     </sys_choice>
@@ -5024,17 +5030,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Volume Backup Policy">d68a3f5c1b73181015dfdce7cc4bcbed</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"ae4f39f81bf3581015dfdce7cc4bcbc6","name":"plan"}}</plan>
-        <snapshot>9baf990e1b3f1c1015dfdce7cc4bcb5a</snapshot>
+        <snapshot>f12bd28fdb3b50505001d602ca9619fd</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-09 10:16:39</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ae4f39f81bf3581015dfdce7cc4bcbc6</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-13 05:11:09</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:04:59</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -5042,10 +5048,16 @@
         <action_template/>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
-        <category display_value="Volume Group Management">96052d0f1b53541015dfdce7cc4bcb92</category>
+        <category display_value="Volume Backup Policy Management">f70b6b501b73181015dfdce7cc4bcbad</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Retrieves details of the specified volume backup policy.&lt;/p&gt; 
+&lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - The OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Policy ID&lt;/b&gt; - OCID of the volume backup policy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt; &lt;li&gt;&lt;b&gt;Volume Backup Policy ID&lt;/b&gt; - OCID of the volume backup policy.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name &lt;/b&gt; - Name of the volume.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Time Created &lt;/b&gt; - Date and time the volume backup policy was created.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Lifecycle State &lt;/b&gt; - Current state of the volume backup policy.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Destination Region&lt;/b&gt; - The paired destination region for copying scheduled backups to.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Defined Tags&lt;/b&gt; - Defined tags for this resource.&lt;/li&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Free-form Tags&lt;/b&gt; - Free-form tags for this resource.&lt;/li&gt;&lt;li&gt;&lt;b&gt;schedules&lt;/b&gt; - Complex object containing the details of the schedule.&lt;/li&gt;
+&lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>get_volume_backup_policy</internal_name>
         <label_cache>[{"name":"{{action.volume}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{action.volumegroupid}}","label":"action➛volumeGroupId","type":"action","ref":""},{"name":"{{action.volume_group_id}}","label":"action➛Volume Group ID","type":"action","ref":""},{"name":"{{action.policy_id}}","label":"action➛Policy ID","type":"action","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume}}","label":"step➛Pre Processing➛volume","type":"step","ref":""},{"name":"{{step[7f904806-1007-4077-aa72-9480d257782b].status_code}}","label":"step➛Get Volume Backup Policy➛Status Code","type":"step","ref":""},{"name":"{{step[7f904806-1007-4077-aa72-9480d257782b].response_body}}","label":"step➛Get Volume Backup Policy➛Response Body","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].availability}}","label":"step➛Post Processing➛availability","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].availabilitydomain}}","label":"step➛Post Processing➛availabilitydomain","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].volumegroupid}}","label":"step➛Post Processing➛volumegroupid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sizeingbs}}","label":"step➛Post Processing➛sizeingbs","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable10}}","label":"step➛Post Processing➛variable10","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].definedtags}}","label":"step➛Post Processing➛definedtags","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].freeformtags}}","label":"step➛Post Processing➛freeformtags","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volumeid}}","label":"step➛Pre Processing➛volumeid","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume_group_id}}","label":"step➛Pre Processing➛volume_group_id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sourcedetails}}","label":"step➛Post Processing➛sourcedetails","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].policyid}}","label":"step➛Pre Processing➛policyid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].destinationregion}}","label":"step➛Post Processing➛destinationregion","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules}}","label":"step➛Post Processing➛schedules","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule}}","label":"step➛Post Processing➛schedules➛schedule","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child1}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child1","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule._}}","label":"step➛Post Processing➛schedules➛schedule","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Backup_Type}}","label":"step➛Post Processing➛schedules➛schedule➛Backup Type","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.backupType}}","label":"step➛Post Processing➛schedules➛schedule➛Backup Type","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child2}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child2","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Period}}","label":"step➛Post Processing➛schedules➛schedule➛Period","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.period}}","label":"step➛Post Processing➛schedules➛schedule➛Period","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child3}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child3","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Hour_Of_Day}}","label":"step➛Post Processing➛schedules➛schedule➛Hour Of Day","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.hourOfDay}}","label":"step➛Post Processing➛schedules➛schedule➛Hour Of Day","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child4}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child4","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Day_Of_Week}}","label":"step➛Post Processing➛schedules➛schedule➛Day Of Week","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.dayOfWeek}}","label":"step➛Post Processing➛schedules➛schedule➛Day Of Week","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child5}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child5","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Day_Of_Month}}","label":"step➛Post Processing➛schedules➛schedule➛Day Of Month","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.dayOfMonth}}","label":"step➛Post Processing➛schedules➛schedule➛Day Of Month","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child6}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child6","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Month}}","label":"step➛Post Processing➛schedules➛schedule➛Month","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.month}}","label":"step➛Post Processing➛schedules➛schedule➛Month","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child7}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child7","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Retention_Seconds}}","label":"step➛Post Processing➛schedules➛schedule➛Retention Seconds","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.retentionSeconds}}","label":"step➛Post Processing➛schedules➛schedule➛Retention Seconds","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.schedule_child8}}","label":"step➛Post Processing➛schedules➛schedule➛schedule_child8","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].schedules.schedule.Time_Zone}}","label":"step➛Post Processing➛schedules➛schedule➛Time Zone","type":"step","ref":""}]</label_cache>
         <master>true</master>
@@ -5060,7 +5072,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8f3f75f81bf3581015dfdce7cc4bcb8f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -5068,7 +5080,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-09 10:16:24</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:04:50</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -6039,7 +6051,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=schedule,child_name=schedule,child_type=object,child_type_label=Object,child_uiUniqueId=24d9ead5-41fe-4f0a-8795-4f7d92a41613,co_type_name=FDc5bfd90edf3f1c1077206533be7c20eb,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=b1c16afb-122a-4a60-a8aa-83b41cd5f5ff</attributes>
+        <attributes>child_label=schedule,child_name=schedule,child_type=object,child_type_label=Object,child_uiUniqueId=24d9ead5-41fe-4f0a-8795-4f7d92a41613,co_type_name=FD372b568f403b505085ab1b5cd8cdc988,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=b1c16afb-122a-4a60-a8aa-83b41cd5f5ff</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -6097,14 +6109,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-09 10:16:29</sys_created_on>
         <sys_id>0c4fb5f81bf3581015dfdce7cc4bcb57</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-13 05:11:03</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:04:52</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -6935,9 +6947,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-09 10:16:25</sys_created_on>
         <sys_id>cf3f75f81bf3581015dfdce7cc4bcba1</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-13 05:11:02</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:04:51</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cf3f75f81bf3581015dfdce7cc4bcba1"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -7538,7 +7550,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=schedule,child_name=schedule,child_type=object,child_type_label=Object,child_uiUniqueId=24d9ead5-41fe-4f0a-8795-4f7d92a41613,co_type_name=FDd9bf1d0edc3f1c10c9d7c4cfe3f79723,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,sourceId=79decbbe-dff5-47eb-9f7a-1aa7910e3765,sourceType=step,sourceUiUniqueId=b1c16afb-122a-4a60-a8aa-83b41cd5f5ff,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=2da350bd-8848-4883-b200-9895447ca6f6</attributes>
+        <attributes>child_label=schedule,child_name=schedule,child_type=object,child_type_label=Object,child_uiUniqueId=24d9ead5-41fe-4f0a-8795-4f7d92a41613,co_type_name=FD883b568f673b50506268b52f78e2eda7,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,sourceId=79decbbe-dff5-47eb-9f7a-1aa7910e3765,sourceType=step,sourceUiUniqueId=b1c16afb-122a-4a60-a8aa-83b41cd5f5ff,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=2da350bd-8848-4883-b200-9895447ca6f6</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -7598,14 +7610,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-09 10:16:31</sys_created_on>
         <sys_id>b44fb5f81bf3581015dfdce7cc4bcbdc</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-13 05:11:04</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:04:53</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -8710,7 +8722,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=schedule,child_name=schedule,child_type=object,child_type_label=Object,child_uiUniqueId=24d9ead5-41fe-4f0a-8795-4f7d92a41613,co_type_name=FDc5bfd90edf3f1c1077206533be7c20eb,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=b1c16afb-122a-4a60-a8aa-83b41cd5f5ff</attributes>
+        <attributes>child_label=schedule,child_name=schedule,child_type=object,child_type_label=Object,child_uiUniqueId=24d9ead5-41fe-4f0a-8795-4f7d92a41613,co_type_name=FD372b568f403b505085ab1b5cd8cdc988,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=b1c16afb-122a-4a60-a8aa-83b41cd5f5ff</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -8768,14 +8780,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-09 10:16:29</sys_created_on>
         <sys_id>0c4fb5f81bf3581015dfdce7cc4bcb57</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-13 05:11:03</sys_updated_on>
+        <sys_updated_on>2020-10-16 12:04:52</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

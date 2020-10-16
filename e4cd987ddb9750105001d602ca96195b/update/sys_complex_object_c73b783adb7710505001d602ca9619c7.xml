@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD073b783ac87710507905851235ad68c7</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>e4cd987ddb9750105001d602ca96195b</scope_name>
+        <serialized_content>{"FlowDesigner:FD073b783ac87710507905851235ad68c7":{"$COCollectionField":[{"Object":{}}],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD073b783ac87710507905851235ad68c7.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"37c17337-e3c7-407b-bcc3-6d6d6455e838\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Volume Backup Policy List\",\"mandatory\":\"false\",\"child_name\":\"volume_backup_policy\",\"uiUniqueId\":\"6c4d8678-715f-47bb-aacc-c7efabe0699a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD073b783ac87710507905851235ad68c7\",\"child_label\":\"volume_backup_policy\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"58312760-290d-446a-acda-8b7e6d421fc9\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"c8ef3feb-bd37-4944-84ac-1d084d89ba09\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-15 10:27:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c73b783adb7710505001d602ca9619c7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FD073b783ac87710507905851235ad68c7</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name>sys_complex_object_c73b783adb7710505001d602ca9619c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-15 10:27:22</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

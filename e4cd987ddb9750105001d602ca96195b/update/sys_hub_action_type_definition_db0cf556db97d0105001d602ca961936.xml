@@ -9,11 +9,17 @@
         <category display_value="Volume Management">890ae88edb1790105001d602ca961987</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Retrieves information about the specified volume attachment.&lt;/p&gt; 
+&lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume Attachment ID&lt;/b&gt; - OCID of the volume attachment.&lt;/li&gt;
+&lt;/ul&gt; 
+&lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt; 
+&lt;li&gt;&lt;b&gt;Volume Attachment ID&lt;/b&gt; - OCID of the volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Availability Domain&lt;/b&gt; - The availability domain of an instance.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Instance ID&lt;/b&gt; - OCID of the instance.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name&lt;/b&gt; - Name of the volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Time Created&lt;/b&gt; - Date and time at which the volume attachment was created.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Lifecycle State&lt;/b&gt; - Current state of the volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume ID&lt;/b&gt; - OCID of the volume.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Attachment Type&lt;/b&gt; - Type of volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Is Read Only&lt;/b&gt; - Whether the attachment was created in read-only mode.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Is Shareable&lt;/b&gt; - Whether the attachment should be created in shareable mode.&lt;/li&gt;&lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>true</ih_action>
         <internal_name>get_volume_attachment</internal_name>
-        <label_cache>[{"name":"{{action.instance_id}}","label":"action➛Instance ID","type":"action","ref":""},{"name":"{{action.variable1}}","label":"action➛variable1","type":"action","ref":""},{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.display_name}}","label":"action➛Display Name","type":"action","ref":""},{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":""},{"name":"{{action.variable4}}","label":"action➛variable4","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛Type","type":"action","ref":""},{"name":"{{action.is_read_only}}","label":"action➛Is Read Only","type":"action","ref":""},{"name":"{{action.is_shareable}}","label":"action➛Is Shareable","type":"action","ref":""},{"name":"{{action.device}}","label":"action➛Device","type":"action","ref":""},{"name":"{{action.volume_attachment_id}}","label":"action➛Volume Attachment ID","type":"action","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].payload}}","label":"step➛Pre Processing➛payload","type":"step","ref":""},{"name":"{{step[860ef0f5-74a9-4b0d-abae-7bc162389326].response_body}}","label":"step➛Get Volume Attachment➛Response Body","type":"step","ref":""},{"name":"{{step[860ef0f5-74a9-4b0d-abae-7bc162389326].status_code}}","label":"step➛Get Volume Attachment➛Status Code","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].availabilitydomain}}","label":"step➛Post Processing➛availabilitydomain","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].instanceid}}","label":"step➛Post Processing➛instanceid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable7}}","label":"step➛Post Processing➛variable7","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].volumegroupid}}","label":"step➛Post Processing➛volumegroupid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].attachmenttype}}","label":"step➛Post Processing➛attachmenttype","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].volumeid}}","label":"step➛Post Processing➛volumeid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].isreadonly}}","label":"step➛Post Processing➛isreadonly","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].isshareable}}","label":"step➛Post Processing➛isshareable","type":"step","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].volume_attachment_id}}","label":"step➛Pre Processing➛volume_attachment_id","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>8ac9be6ddb6b58105001d602ca961955</latest_snapshot>
+        <label_cache>[{"name":"{{action.instance_id}}","label":"action➛Instance ID","type":"action","ref":""},{"name":"{{action.variable1}}","label":"action➛variable1","type":"action","ref":""},{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.display_name}}","label":"action➛Display Name","type":"action","ref":""},{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":""},{"name":"{{action.variable4}}","label":"action➛variable4","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛Type","type":"action","ref":""},{"name":"{{action.is_read_only}}","label":"action➛Is Read Only","type":"action","ref":""},{"name":"{{action.is_shareable}}","label":"action➛Is Shareable","type":"action","ref":""},{"name":"{{action.device}}","label":"action➛Device","type":"action","ref":""},{"name":"{{action.volume_attachment_id}}","label":"action➛Volume Attachment ID","type":"action","ref":""},{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].payload}}","label":"step➛Pre Processing➛payload","type":"step","ref":""},{"name":"{{step[860ef0f5-74a9-4b0d-abae-7bc162389326].response_body}}","label":"step➛Get Volume Attachment➛Response Body","type":"step","ref":""},{"name":"{{step[860ef0f5-74a9-4b0d-abae-7bc162389326].status_code}}","label":"step➛Get Volume Attachment➛Status Code","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].availabilitydomain}}","label":"step➛Post Processing➛availabilitydomain","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].instanceid}}","label":"step➛Post Processing➛instanceid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable7}}","label":"step➛Post Processing➛variable7","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].volumegroupid}}","label":"step➛Post Processing➛volumegroupid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].attachmenttype}}","label":"step➛Post Processing➛attachmenttype","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].volumeid}}","label":"step➛Post Processing➛volumeid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].isreadonly}}","label":"step➛Post Processing➛isreadonly","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].isshareable}}","label":"step➛Post Processing➛isshareable","type":"step","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].volume_attachment_id}}","label":"step➛Pre Processing➛volume_attachment_id","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>3b1c1103db7750505001d602ca9619c7</latest_snapshot>
         <master_snapshot>2bc9fe6ddb6b58105001d602ca9619d8</master_snapshot>
         <name>Get Volume Attachment</name>
         <natlang/>
@@ -26,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>db0cf556db97d0105001d602ca961936</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Get Volume Attachment</sys_name>
         <sys_overrides/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
@@ -34,7 +40,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_db0cf556db97d0105001d602ca961936</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-29 12:12:07</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:29:27</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -2283,12 +2289,120 @@ if(inputs.statusCode == "200"){
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=db0cf556db97d0105001d602ca961936^sys_idNOT INf86d3d96db97d0105001d602ca9619a9"/>
+    <sys_hub_action_input action="delete_multiple" query="model=db0cf556db97d0105001d602ca961936^sys_idNOT IN2d5a1d4fdb3750505001d602ca96199c,e95a1d4fdb3750505001d602ca961973"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=bf2d30b7-6fe8-4407-b68f-65c4498d31ed</attributes>
+        <attributes>dynamic=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=bf2d30b7-6fe8-4407-b68f-65c4498d31ed</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>volume_attachment_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Volume Attachment ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Get Volume Attachment">db0cf556db97d0105001d602ca961936</model>
+        <model_id>db0cf556db97d0105001d602ca961936</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-16 07:21:32</sys_created_on>
+        <sys_id>2d5a1d4fdb3750505001d602ca96199c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-16 07:21:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2d5a1d4fdb3750505001d602ca96199c^sys_idNOT INb15a1d4fdb3750505001d602ca9619a5"/>
+    <sys_hub_action_input_action_instance action="INSERT_OR_UPDATE">
+        <action_input display_value="">2d5a1d4fdb3750505001d602ca96199c</action_input>
+        <action_inputs/>
+        <action_type display_value="Look up Volume Attachments">8906d78edb5f90105001d602ca96190d</action_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-16 07:21:32</sys_created_on>
+        <sys_id>b15a1d4fdb3750505001d602ca9619a5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-16 07:29:11</sys_updated_on>
+    </sys_hub_action_input_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b15a1d4fdb3750505001d602ca9619a5"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_input_action_instance</document>
+        <document_key>b15a1d4fdb3750505001d602ca9619a5</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-16 07:21:32</sys_created_on>
+        <sys_id>f95a1d4fdb3750505001d602ca9619b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-16 07:21:32</sys_updated_on>
+        <value>{{action.compartment_id}}</value>
+        <variable display_value="">1906d78edb5f90105001d602ca961914</variable>
+    </sys_variable_value>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7cffe6e9-8caa-41ff-9785-a10b13758c23</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2312,7 +2426,7 @@ if(inputs.statusCode == "200"){
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>volume_attachment_id</element>
+        <element>compartment_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -2320,7 +2434,7 @@ if(inputs.statusCode == "200"){
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>Volume Attachment ID</label>
+        <label>Compartment ID</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Get Volume Attachment">db0cf556db97d0105001d602ca961936</model>
@@ -2344,8 +2458,8 @@ if(inputs.statusCode == "200"){
         <staged>false</staged>
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-09-19 05:27:50</sys_created_on>
-        <sys_id>f86d3d96db97d0105001d602ca9619a9</sys_id>
+        <sys_created_on>2020-10-16 07:21:31</sys_created_on>
+        <sys_id>e95a1d4fdb3750505001d602ca961973</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -2353,7 +2467,7 @@ if(inputs.statusCode == "200"){
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-19 05:27:50</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:21:31</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2985,7 +3099,7 @@ if(inputs.statusCode == "200"){
         <hint/>
         <internal_link/>
         <internal_type display_value="String">string</internal_type>
-        <label>ID</label>
+        <label>Volume Attachment ID</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
         <model display_value="Get Volume Attachment">db0cf556db97d0105001d602ca961936</model>
@@ -3011,14 +3125,14 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-19 05:22:04</sys_created_on>
         <sys_id>a01c3956db97d0105001d602ca9619a1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-19 05:22:04</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:21:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -5531,7 +5645,7 @@ if(inputs.statusCode == "200"){
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936^sys_idNOT IN416d3d96db97d0105001d602ca9619af"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936^sys_idNOT IN315a1d4fdb3750505001d602ca9619a4,615a1d4fdb3750505001d602ca961985"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>volume_attachment_id</element>
         <help/>
@@ -5542,8 +5656,8 @@ if(inputs.statusCode == "200"){
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-09-19 05:27:50</sys_created_on>
-        <sys_id>416d3d96db97d0105001d602ca9619af</sys_id>
+        <sys_created_on>2020-10-16 07:21:32</sys_created_on>
+        <sys_id>315a1d4fdb3750505001d602ca9619a4</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
@@ -5551,11 +5665,34 @@ if(inputs.statusCode == "200"){
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-19 05:27:50</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:21:32</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936^sys_idNOT IN570cf556db97d0105001d602ca96194b,130cf556db97d0105001d602ca96194c,db0cf556db97d0105001d602ca96194c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>compartment_id</element>
+        <help/>
+        <hint/>
+        <label>Compartment ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-16 07:21:32</sys_created_on>
+        <sys_id>615a1d4fdb3750505001d602ca961985</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-16 07:21:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936^sys_idNOT IN570cf556db97d0105001d602ca96194b,130cf556db97d0105001d602ca96194c,db0cf556db97d0105001d602ca96194c,fb2b1d8fdb3750505001d602ca9619c9"/>
     <sys_choice field="type" table="var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936">
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -5613,6 +5750,27 @@ if(inputs.statusCode == "200"){
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2020-09-19 05:22:00</sys_updated_on>
             <value>paravirtualized</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_choice field="volume_attachment_id" table="var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>volume_attachment_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_db0cf556db97d0105001d602ca961936</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-16 07:25:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fb2b1d8fdb3750505001d602ca9619c9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-16 07:25:13</sys_updated_on>
+            <value/>
         </sys_choice>
     </sys_choice>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_db0cf556db97d0105001d602ca961936^sys_idNOT IN201c3956db97d0105001d602ca9619b1,241c3956db97d0105001d602ca96199a,381c3956db97d0105001d602ca9619de,3c1c3956db97d0105001d602ca9619c7,641c3956db97d0105001d602ca9619ab,701c3956db97d0105001d602ca9619c2,7c1c3956db97d0105001d602ca9619d8,a81c3956db97d0105001d602ca9619a5,b01c3956db97d0105001d602ca9619d3,b41c3956db97d0105001d602ca9619bc,e81c3956db97d0105001d602ca9619b6,ec1c3956db97d0105001d602ca96199f,f41c3956db97d0105001d602ca9619cd"/>
@@ -5781,7 +5939,7 @@ if(inputs.statusCode == "200"){
         <element>id</element>
         <help/>
         <hint/>
-        <label>ID</label>
+        <label>Volume Attachment ID</label>
         <language>en</language>
         <name>var__m_sys_hub_action_output_db0cf556db97d0105001d602ca961936</name>
         <plural/>
@@ -5789,14 +5947,14 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-19 05:22:04</sys_created_on>
         <sys_id>a81c3956db97d0105001d602ca9619a5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-19 05:22:04</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:21:34</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -5979,17 +6137,17 @@ if(inputs.statusCode == "200"){
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Volume Attachment">db0cf556db97d0105001d602ca961936</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"c2d9b2addb6b58105001d602ca961947","name":"plan"}}</plan>
-        <snapshot>8ac9be6ddb6b58105001d602ca961955</snapshot>
+        <snapshot>3b1c1103db7750505001d602ca9619c7</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-29 12:12:13</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c2d9b2addb6b58105001d602ca961947</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-29 12:12:13</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:29:34</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -6000,9 +6158,15 @@ if(inputs.statusCode == "200"){
         <category display_value="Volume Management">890ae88edb1790105001d602ca961987</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Retrieves information about the specified volume attachment.&lt;/p&gt; 
+&lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume Attachment ID&lt;/b&gt; - OCID of the volume attachment.&lt;/li&gt;
+&lt;/ul&gt; 
+&lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt; 
+&lt;li&gt;&lt;b&gt;Volume Attachment ID&lt;/b&gt; - OCID of the volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Availability Domain&lt;/b&gt; - The availability domain of an instance.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Instance ID&lt;/b&gt; - OCID of the instance.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name&lt;/b&gt; - Name of the volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Time Created&lt;/b&gt; - Date and time at which the volume attachment was created.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Lifecycle State&lt;/b&gt; - Current state of the volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume ID&lt;/b&gt; - OCID of the volume.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Attachment Type&lt;/b&gt; - Type of volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Is Read Only&lt;/b&gt; - Whether the attachment was created in read-only mode.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Is Shareable&lt;/b&gt; - Whether the attachment should be created in shareable mode.&lt;/li&gt;&lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>get_volume_attachment</internal_name>
-        <label_cache>[{"name":"{{action.instance_id}}","label":"action➛Instance ID","type":"action","ref":""},{"name":"{{action.variable1}}","label":"action➛variable1","type":"action","ref":""},{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.display_name}}","label":"action➛Display Name","type":"action","ref":""},{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":""},{"name":"{{action.variable4}}","label":"action➛variable4","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛Type","type":"action","ref":""},{"name":"{{action.is_read_only}}","label":"action➛Is Read Only","type":"action","ref":""},{"name":"{{action.is_shareable}}","label":"action➛Is Shareable","type":"action","ref":""},{"name":"{{action.device}}","label":"action➛Device","type":"action","ref":""},{"name":"{{action.volume_attachment_id}}","label":"action➛Volume Attachment ID","type":"action","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].payload}}","label":"step➛Pre Processing➛payload","type":"step","ref":""},{"name":"{{step[860ef0f5-74a9-4b0d-abae-7bc162389326].response_body}}","label":"step➛Get Volume Attachment➛Response Body","type":"step","ref":""},{"name":"{{step[860ef0f5-74a9-4b0d-abae-7bc162389326].status_code}}","label":"step➛Get Volume Attachment➛Status Code","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].availabilitydomain}}","label":"step➛Post Processing➛availabilitydomain","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].instanceid}}","label":"step➛Post Processing➛instanceid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable7}}","label":"step➛Post Processing➛variable7","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].volumegroupid}}","label":"step➛Post Processing➛volumegroupid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].attachmenttype}}","label":"step➛Post Processing➛attachmenttype","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].volumeid}}","label":"step➛Post Processing➛volumeid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].isreadonly}}","label":"step➛Post Processing➛isreadonly","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].isshareable}}","label":"step➛Post Processing➛isshareable","type":"step","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].volume_attachment_id}}","label":"step➛Pre Processing➛volume_attachment_id","type":"step","ref":""}]</label_cache>
+        <label_cache>[{"name":"{{action.instance_id}}","label":"action➛Instance ID","type":"action","ref":""},{"name":"{{action.variable1}}","label":"action➛variable1","type":"action","ref":""},{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.display_name}}","label":"action➛Display Name","type":"action","ref":""},{"name":"{{action.variable}}","label":"action➛variable","type":"action","ref":""},{"name":"{{action.variable4}}","label":"action➛variable4","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛Type","type":"action","ref":""},{"name":"{{action.is_read_only}}","label":"action➛Is Read Only","type":"action","ref":""},{"name":"{{action.is_shareable}}","label":"action➛Is Shareable","type":"action","ref":""},{"name":"{{action.device}}","label":"action➛Device","type":"action","ref":""},{"name":"{{action.volume_attachment_id}}","label":"action➛Volume Attachment ID","type":"action","ref":""},{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].payload}}","label":"step➛Pre Processing➛payload","type":"step","ref":""},{"name":"{{step[860ef0f5-74a9-4b0d-abae-7bc162389326].response_body}}","label":"step➛Get Volume Attachment➛Response Body","type":"step","ref":""},{"name":"{{step[860ef0f5-74a9-4b0d-abae-7bc162389326].status_code}}","label":"step➛Get Volume Attachment➛Status Code","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].availabilitydomain}}","label":"step➛Post Processing➛availabilitydomain","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].instanceid}}","label":"step➛Post Processing➛instanceid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].variable7}}","label":"step➛Post Processing➛variable7","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].volumegroupid}}","label":"step➛Post Processing➛volumegroupid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].attachmenttype}}","label":"step➛Post Processing➛attachmenttype","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].volumeid}}","label":"step➛Post Processing➛volumeid","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].isreadonly}}","label":"step➛Post Processing➛isreadonly","type":"step","ref":""},{"name":"{{step[9fbee94b-cba4-4c1b-840e-868ea1ec3f2d].isshareable}}","label":"step➛Post Processing➛isshareable","type":"step","ref":""},{"name":"{{step[19e96694-feb6-4bb1-a75d-6a263871e002].volume_attachment_id}}","label":"step➛Pre Processing➛volume_attachment_id","type":"step","ref":""}]</label_cache>
         <master>true</master>
         <name>Get Volume Attachment</name>
         <natlang/>
@@ -6015,7 +6179,7 @@ if(inputs.statusCode == "200"){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2bc9fe6ddb6b58105001d602ca9619d8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -6023,7 +6187,7 @@ if(inputs.statusCode == "200"){
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-29 12:12:02</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:25:43</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -8136,12 +8300,12 @@ if(inputs.statusCode == "200"){
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=2bc9fe6ddb6b58105001d602ca9619d8^sys_idNOT IN23c9fe6ddb6b58105001d602ca9619e6"/>
+    <sys_hub_action_input action="delete_multiple" query="model=2bc9fe6ddb6b58105001d602ca9619d8^sys_idNOT IN074b51cfdb3750505001d602ca9619bc,074b51cfdb3750505001d602ca9619cc"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=bf2d30b7-6fe8-4407-b68f-65c4498d31ed</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=7cffe6e9-8caa-41ff-9785-a10b13758c23</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -8165,7 +8329,7 @@ if(inputs.statusCode == "200"){
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>volume_attachment_id</element>
+        <element>compartment_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -8173,7 +8337,7 @@ if(inputs.statusCode == "200"){
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>Volume Attachment ID</label>
+        <label>Compartment ID</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Get Volume Attachment">2bc9fe6ddb6b58105001d602ca9619d8</model>
@@ -8197,8 +8361,8 @@ if(inputs.statusCode == "200"){
         <staged>false</staged>
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-09-29 12:12:02</sys_created_on>
-        <sys_id>23c9fe6ddb6b58105001d602ca9619e6</sys_id>
+        <sys_created_on>2020-10-16 07:25:43</sys_created_on>
+        <sys_id>074b51cfdb3750505001d602ca9619bc</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -8206,7 +8370,7 @@ if(inputs.statusCode == "200"){
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-29 12:12:02</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:25:43</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -8218,6 +8382,114 @@ if(inputs.statusCode == "200"){
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>dynamic=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=bf2d30b7-6fe8-4407-b68f-65c4498d31ed</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>volume_attachment_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Volume Attachment ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Get Volume Attachment">2bc9fe6ddb6b58105001d602ca9619d8</model>
+        <model_id>2bc9fe6ddb6b58105001d602ca9619d8</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_2bc9fe6ddb6b58105001d602ca9619d8</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-16 07:25:44</sys_created_on>
+        <sys_id>074b51cfdb3750505001d602ca9619cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-16 07:25:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=074b51cfdb3750505001d602ca9619cc^sys_idNOT IN034b51cfdb3750505001d602ca9619d4"/>
+    <sys_hub_action_input_action_instance action="INSERT_OR_UPDATE">
+        <action_input display_value="">074b51cfdb3750505001d602ca9619cc</action_input>
+        <action_inputs/>
+        <action_type display_value="Look up Volume Attachments">8906d78edb5f90105001d602ca96190d</action_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-16 07:25:44</sys_created_on>
+        <sys_id>034b51cfdb3750505001d602ca9619d4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-16 07:29:24</sys_updated_on>
+    </sys_hub_action_input_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=034b51cfdb3750505001d602ca9619d4"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_input_action_instance</document>
+        <document_key>034b51cfdb3750505001d602ca9619d4</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-16 07:25:44</sys_created_on>
+        <sys_id>4b4b51cfdb3750505001d602ca9619d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-16 07:25:44</sys_updated_on>
+        <value>{{action.compartment_id}}</value>
+        <variable display_value="">1906d78edb5f90105001d602ca961914</variable>
+    </sys_variable_value>
     <sys_hub_action_output action="delete_multiple" query="model=2bc9fe6ddb6b58105001d602ca9619d8^sys_idNOT IN08d932addb6b58105001d602ca9619c6,54d932addb6b58105001d602ca9619ed,54d932addb6b58105001d602ca9619f8,54d972addb6b58105001d602ca961903,54d972addb6b58105001d602ca96190e,54d972addb6b58105001d602ca961919,5cd932addb6b58105001d602ca9619f2,5cd932addb6b58105001d602ca9619fd,5cd972addb6b58105001d602ca961908,5cd972addb6b58105001d602ca961913,84d932addb6b58105001d602ca9619d0,8cd932addb6b58105001d602ca9619d5,94d932addb6b58105001d602ca9619db"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -9170,7 +9442,7 @@ if(inputs.statusCode == "200"){
         <hint/>
         <internal_link/>
         <internal_type display_value="String">string</internal_type>
-        <label>ID</label>
+        <label>Volume Attachment ID</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
         <model display_value="Get Volume Attachment">2bc9fe6ddb6b58105001d602ca9619d8</model>
@@ -9196,14 +9468,14 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-29 12:12:05</sys_created_on>
         <sys_id>8cd932addb6b58105001d602ca9619d5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-29 12:12:05</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:25:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -11248,7 +11520,30 @@ if(inputs.statusCode == "200"){
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_2bc9fe6ddb6b58105001d602ca9619d8^sys_idNOT IN6fc9fe6ddb6b58105001d602ca9619ea"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_2bc9fe6ddb6b58105001d602ca9619d8^sys_idNOT IN074b51cfdb3750505001d602ca9619c1,8f4b51cfdb3750505001d602ca9619d2"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>compartment_id</element>
+        <help/>
+        <hint/>
+        <label>Compartment ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_2bc9fe6ddb6b58105001d602ca9619d8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-16 07:25:43</sys_created_on>
+        <sys_id>074b51cfdb3750505001d602ca9619c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-16 07:25:43</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>volume_attachment_id</element>
         <help/>
@@ -11259,8 +11554,8 @@ if(inputs.statusCode == "200"){
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-09-29 12:12:02</sys_created_on>
-        <sys_id>6fc9fe6ddb6b58105001d602ca9619ea</sys_id>
+        <sys_created_on>2020-10-16 07:25:44</sys_created_on>
+        <sys_id>8f4b51cfdb3750505001d602ca9619d2</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
@@ -11268,10 +11563,32 @@ if(inputs.statusCode == "200"){
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-29 12:12:02</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:25:44</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_2bc9fe6ddb6b58105001d602ca9619d8^sys_idNOT INc74b51cfdb3750505001d602ca9619cf"/>
+    <sys_choice field="volume_attachment_id" table="var__m_sys_hub_action_input_2bc9fe6ddb6b58105001d602ca9619d8">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>volume_attachment_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_2bc9fe6ddb6b58105001d602ca9619d8</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-16 07:25:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c74b51cfdb3750505001d602ca9619cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-16 07:25:44</sys_updated_on>
+            <value/>
+        </sys_choice>
+    </sys_choice>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_2bc9fe6ddb6b58105001d602ca9619d8^sys_idNOT IN90d932addb6b58105001d602ca9619ec,90d932addb6b58105001d602ca9619f7,90d972addb6b58105001d602ca961902,90d972addb6b58105001d602ca96190d,90d972addb6b58105001d602ca961918,98d932addb6b58105001d602ca9619f1,98d932addb6b58105001d602ca9619fc,98d972addb6b58105001d602ca961907,98d972addb6b58105001d602ca961912,a8d972addb6b58105001d602ca96191d,c0d932addb6b58105001d602ca9619cf,c8d932addb6b58105001d602ca9619d4,d0d932addb6b58105001d602ca9619da"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>availabilitydomain</element>
@@ -11553,7 +11870,7 @@ if(inputs.statusCode == "200"){
         <element>id</element>
         <help/>
         <hint/>
-        <label>ID</label>
+        <label>Volume Attachment ID</label>
         <language>en</language>
         <name>var__m_sys_hub_action_output_2bc9fe6ddb6b58105001d602ca9619d8</name>
         <plural/>
@@ -11561,14 +11878,14 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-29 12:12:05</sys_created_on>
         <sys_id>d0d932addb6b58105001d602ca9619da</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-29 12:12:05</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:25:45</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>

@@ -9,11 +9,17 @@
         <category display_value="Volume Group Backup Management">4c062d4f1b53541015dfdce7cc4bcbcb</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Retrieves details of the specified volume group backup.&lt;/p&gt; 
+&lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt; 
+&lt;li&gt;&lt;b&gt;Volume Group Backup ID&lt;/b&gt; - Unique OCID of the volume group backup.&lt;/li&gt;&lt;/ul&gt; 
+&lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt; &lt;li&gt;&lt;b&gt;Volume Group Backup ID&lt;/b&gt; - OCID of the volume group backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Availability Domain&lt;/b&gt; - Availability domain of the volume.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name &lt;/b&gt; - Name of the volume.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Time Created &lt;/b&gt; - Date and time the volume group backup was created.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Lifecycle State &lt;/b&gt; - Current state of the volume group backup.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Volume Group ID&lt;/b&gt; - The OCID of the source volume group.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Size In GBs&lt;/b&gt; - Size of the volume in GBs.&lt;/li&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Defined Tags&lt;/b&gt; - Defined tags for this resource.&lt;/li&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Free-form Tags&lt;/b&gt; - Free-form tags for this resource.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Volume Backup IDs&lt;/b&gt; - OCIDs of the volume backup backup.&lt;/li&gt;&lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>true</ih_action>
         <internal_name>get_volume_group_backup</internal_name>
         <label_cache>[{"name":"{{action.volume}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{action.volumegroupid}}","label":"action➛volumeGroupId","type":"action","ref":""},{"name":"{{action.volume_group_id}}","label":"action➛Volume Group ID","type":"action","ref":""},{"name":"{{action.volume_group_backup_id}}","label":"action➛Volume Group Backup ID","type":"action","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume}}","label":"step➛Pre Processing➛volume","type":"step","ref":""},{"name":"{{step[7f904806-1007-4077-aa72-9480d257782b].status_code}}","label":"step➛Get Volume Group Backup➛Status Code","type":"step","ref":""},{"name":"{{step[7f904806-1007-4077-aa72-9480d257782b].response_body}}","label":"step➛Get Volume Group Backup➛Response Body","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].availability}}","label":"step➛Post Processing➛availability","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].availabilitydomain}}","label":"step➛Post Processing➛availabilitydomain","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].volumegroupid}}","label":"step➛Post Processing➛volumegroupid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sizeingbs}}","label":"step➛Post Processing➛sizeingbs","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable10}}","label":"step➛Post Processing➛variable10","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].definedtags}}","label":"step➛Post Processing➛definedtags","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].freeformtags}}","label":"step➛Post Processing➛freeformtags","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volumeid}}","label":"step➛Pre Processing➛volumeid","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume_group_id}}","label":"step➛Pre Processing➛volume_group_id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sourcedetails}}","label":"step➛Post Processing➛sourcedetails","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume_group_backup_id}}","label":"step➛Pre Processing➛volume_group_backup_id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sourcetype}}","label":"step➛Post Processing➛sourcetype","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].volumebackupids}}","label":"step➛Post Processing➛volumebackupids","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].volumebackupids.volumebackupid}}","label":"step➛Post Processing➛volumebackupids➛volumebackupid","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>028d889c1bb7d41015dfdce7cc4bcb35</latest_snapshot>
+        <latest_snapshot>1d445a87db3b50505001d602ca961929</latest_snapshot>
         <master_snapshot>36f616801b73d41015dfdce7cc4bcba7</master_snapshot>
         <name>Get Volume Group Backup</name>
         <natlang/>
@@ -26,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b2aea5071b93541015dfdce7cc4bcb21</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Get Volume Group Backup</sys_name>
         <sys_overrides/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
@@ -34,7 +40,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_b2aea5071b93541015dfdce7cc4bcb21</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:42:50</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:34:46</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -506,10 +512,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 12:19:00</sys_created_on>
         <sys_id>6baea5071b93541015dfdce7cc4bcb7f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 12:35:34</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:32:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6baea5071b93541015dfdce7cc4bcb7f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -520,31 +526,29 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 12:19:03</sys_created_on>
         <sys_id>88bea5071b93541015dfdce7cc4bcbd8</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 12:35:34</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:32:45</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-if(inputs.statusCode == "200"){
-    try{
-      var responseData = JSON.parse(inputs.responseBody);
-    outputs.status = "Success";
-    outputs.id = responseData.id;
-    outputs.compartmentid = responseData.compartmentId;
-    outputs.displayname = responseData.displayName;
-    outputs.timecreated = responseData.timeCreated;
-    outputs.lifecyclestate = responseData.lifecycleState;
-    outputs.sizeingbs = responseData.sizeInGBs;
-    outputs.sourcetype = responseData.sourceType;
-    outputs.volumegroupid = responseData.volumeGroupId;  
-    outputs.definedtags = responseData.definedTags;
-    outputs.freeformtags = responseData.freeformTags;
-    outputs.volumebackupids = responseData.volumeBackupIds;
-    }
-  catch(ex){
-	throw new Error('JSON Parse Error. Response Body may be empty.');
-  }
-}
- else {
+    if (inputs.statusCode == "200") {
+        try {
+            var responseData = JSON.parse(inputs.responseBody);
+            outputs.status = "Success";
+            outputs.id = responseData.id;
+            outputs.compartmentid = responseData.compartmentId;
+            outputs.displayname = responseData.displayName;
+            outputs.timecreated = responseData.timeCreated;
+            outputs.lifecyclestate = responseData.lifecycleState;
+            outputs.sizeingbs = responseData.sizeInGBs;
+            outputs.sourcetype = responseData.sourceType;
+            outputs.volumegroupid = responseData.volumeGroupId;
+            outputs.definedtags = responseData.definedTags;
+            outputs.freeformtags = responseData.freeformTags;
+            outputs.volumebackupids = responseData.volumeBackupIds;
+        } catch (ex) {
+            throw new Error('JSON Parse Error. Response Body may be empty.');
+        }
+    } else {
         var errMsgs = new OracleBlockStorageErrorHandler().errorHandler(inputs.responseBody);
         outputs.error_message = errMsgs[0];
         outputs.status = errMsgs[1];
@@ -2302,9 +2306,9 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 04:03:39</sys_created_on>
         <sys_id>d7b6de401b73d41015dfdce7cc4bcb78</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:42:33</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:34:29</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d7b6de401b73d41015dfdce7cc4bcb78"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3686,10 +3690,10 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 12:19:00</sys_created_on>
         <sys_id>6baea5071b93541015dfdce7cc4bcb7f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 12:35:34</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:32:45</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6baea5071b93541015dfdce7cc4bcb7f"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3700,31 +3704,29 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 12:19:03</sys_created_on>
         <sys_id>88bea5071b93541015dfdce7cc4bcbd8</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 12:35:34</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:32:45</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-if(inputs.statusCode == "200"){
-    try{
-      var responseData = JSON.parse(inputs.responseBody);
-    outputs.status = "Success";
-    outputs.id = responseData.id;
-    outputs.compartmentid = responseData.compartmentId;
-    outputs.displayname = responseData.displayName;
-    outputs.timecreated = responseData.timeCreated;
-    outputs.lifecyclestate = responseData.lifecycleState;
-    outputs.sizeingbs = responseData.sizeInGBs;
-    outputs.sourcetype = responseData.sourceType;
-    outputs.volumegroupid = responseData.volumeGroupId;  
-    outputs.definedtags = responseData.definedTags;
-    outputs.freeformtags = responseData.freeformTags;
-    outputs.volumebackupids = responseData.volumeBackupIds;
-    }
-  catch(ex){
-	throw new Error('JSON Parse Error. Response Body may be empty.');
-  }
-}
- else {
+    if (inputs.statusCode == "200") {
+        try {
+            var responseData = JSON.parse(inputs.responseBody);
+            outputs.status = "Success";
+            outputs.id = responseData.id;
+            outputs.compartmentid = responseData.compartmentId;
+            outputs.displayname = responseData.displayName;
+            outputs.timecreated = responseData.timeCreated;
+            outputs.lifecyclestate = responseData.lifecycleState;
+            outputs.sizeingbs = responseData.sizeInGBs;
+            outputs.sourcetype = responseData.sourceType;
+            outputs.volumegroupid = responseData.volumeGroupId;
+            outputs.definedtags = responseData.definedTags;
+            outputs.freeformtags = responseData.freeformTags;
+            outputs.volumebackupids = responseData.volumeBackupIds;
+        } catch (ex) {
+            throw new Error('JSON Parse Error. Response Body may be empty.');
+        }
+    } else {
         var errMsgs = new OracleBlockStorageErrorHandler().errorHandler(inputs.responseBody);
         outputs.error_message = errMsgs[0];
         outputs.status = errMsgs[1];
@@ -5744,17 +5746,17 @@ if(inputs.statusCode == "200"){
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Volume Group Backup">b2aea5071b93541015dfdce7cc4bcb21</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"9507d6801b73d41015dfdce7cc4bcb3e","name":"plan"}}</plan>
-        <snapshot>028d889c1bb7d41015dfdce7cc4bcb35</snapshot>
+        <snapshot>1d445a87db3b50505001d602ca961929</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 04:04:53</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9507d6801b73d41015dfdce7cc4bcb3e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:42:56</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:34:52</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -5765,7 +5767,13 @@ if(inputs.statusCode == "200"){
         <category display_value="Volume Group Backup Management">4c062d4f1b53541015dfdce7cc4bcbcb</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Retrieves details of the specified volume group backup.&lt;/p&gt; 
+&lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt; 
+&lt;li&gt;&lt;b&gt;Volume Group Backup ID&lt;/b&gt; - Unique OCID of the volume group backup.&lt;/li&gt;&lt;/ul&gt; 
+&lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt; &lt;li&gt;&lt;b&gt;Volume Group Backup ID&lt;/b&gt; - OCID of the volume group backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Availability Domain&lt;/b&gt; - Availability domain of the volume.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name &lt;/b&gt; - Name of the volume.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Time Created &lt;/b&gt; - Date and time the volume group backup was created.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Lifecycle State &lt;/b&gt; - Current state of the volume group backup.&lt;/li&gt; &lt;li&gt;&lt;b&gt;Volume Group ID&lt;/b&gt; - The OCID of the source volume group.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Size In GBs&lt;/b&gt; - Size of the volume in GBs.&lt;/li&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Defined Tags&lt;/b&gt; - Defined tags for this resource.&lt;/li&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;Free-form Tags&lt;/b&gt; - Free-form tags for this resource.&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Volume Backup IDs&lt;/b&gt; - OCIDs of the volume backup backup.&lt;/li&gt;&lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>get_volume_group_backup</internal_name>
         <label_cache>[{"name":"{{action.volume}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{action.volumegroupid}}","label":"action➛volumeGroupId","type":"action","ref":""},{"name":"{{action.volume_group_id}}","label":"action➛Volume Group ID","type":"action","ref":""},{"name":"{{action.volume_group_backup_id}}","label":"action➛Volume Group Backup ID","type":"action","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume}}","label":"step➛Pre Processing➛volume","type":"step","ref":""},{"name":"{{step[7f904806-1007-4077-aa72-9480d257782b].status_code}}","label":"step➛Get Volume Group Backup➛Status Code","type":"step","ref":""},{"name":"{{step[7f904806-1007-4077-aa72-9480d257782b].response_body}}","label":"step➛Get Volume Group Backup➛Response Body","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].availability}}","label":"step➛Post Processing➛availability","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].availabilitydomain}}","label":"step➛Post Processing➛availabilitydomain","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].volumegroupid}}","label":"step➛Post Processing➛volumegroupid","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sizeingbs}}","label":"step➛Post Processing➛sizeingbs","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].variable10}}","label":"step➛Post Processing➛variable10","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].definedtags}}","label":"step➛Post Processing➛definedtags","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].freeformtags}}","label":"step➛Post Processing➛freeformtags","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volumeid}}","label":"step➛Pre Processing➛volumeid","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume_group_id}}","label":"step➛Pre Processing➛volume_group_id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sourcedetails}}","label":"step➛Post Processing➛sourcedetails","type":"step","ref":""},{"name":"{{step[5b896b4f-5be7-4c85-b9f6-d7f40750d2f4].volume_group_backup_id}}","label":"step➛Pre Processing➛volume_group_backup_id","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].sourcetype}}","label":"step➛Post Processing➛sourcetype","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].volumebackupids}}","label":"step➛Post Processing➛volumebackupids","type":"step","ref":""},{"name":"{{step[79decbbe-dff5-47eb-9f7a-1aa7910e3765].volumebackupids.volumebackupid}}","label":"step➛Post Processing➛volumebackupids➛volumebackupid","type":"step","ref":""}]</label_cache>
         <master>true</master>
@@ -5780,7 +5788,7 @@ if(inputs.statusCode == "200"){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>36f616801b73d41015dfdce7cc4bcba7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -5788,7 +5796,7 @@ if(inputs.statusCode == "200"){
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:42:48</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:34:44</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -5968,10 +5976,10 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 04:04:44</sys_created_on>
         <sys_id>03f656801b73d41015dfdce7cc4bcb17</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 04:04:45</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:32:59</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=03f656801b73d41015dfdce7cc4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5982,31 +5990,29 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 04:04:46</sys_created_on>
         <sys_id>6bf656801b73d41015dfdce7cc4bcb75</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 04:04:46</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:32:59</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-if(inputs.statusCode == "200"){
-    try{
-      var responseData = JSON.parse(inputs.responseBody);
-    outputs.status = "Success";
-    outputs.id = responseData.id;
-    outputs.compartmentid = responseData.compartmentId;
-    outputs.displayname = responseData.displayName;
-    outputs.timecreated = responseData.timeCreated;
-    outputs.lifecyclestate = responseData.lifecycleState;
-    outputs.sizeingbs = responseData.sizeInGBs;
-    outputs.sourcetype = responseData.sourceType;
-    outputs.volumegroupid = responseData.volumeGroupId;  
-    outputs.definedtags = responseData.definedTags;
-    outputs.freeformtags = responseData.freeformTags;
-    outputs.volumebackupids = responseData.volumeBackupIds;
-    }
-  catch(ex){
-	throw new Error('JSON Parse Error. Response Body may be empty.');
-  }
-}
- else {
+    if (inputs.statusCode == "200") {
+        try {
+            var responseData = JSON.parse(inputs.responseBody);
+            outputs.status = "Success";
+            outputs.id = responseData.id;
+            outputs.compartmentid = responseData.compartmentId;
+            outputs.displayname = responseData.displayName;
+            outputs.timecreated = responseData.timeCreated;
+            outputs.lifecyclestate = responseData.lifecycleState;
+            outputs.sizeingbs = responseData.sizeInGBs;
+            outputs.sourcetype = responseData.sourceType;
+            outputs.volumegroupid = responseData.volumeGroupId;
+            outputs.definedtags = responseData.definedTags;
+            outputs.freeformtags = responseData.freeformTags;
+            outputs.volumebackupids = responseData.volumeBackupIds;
+        } catch (ex) {
+            throw new Error('JSON Parse Error. Response Body may be empty.');
+        }
+    } else {
         var errMsgs = new OracleBlockStorageErrorHandler().errorHandler(inputs.responseBody);
         outputs.error_message = errMsgs[0];
         outputs.status = errMsgs[1];
@@ -7939,9 +7945,9 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 04:04:43</sys_created_on>
         <sys_id>bef616801b73d41015dfdce7cc4bcbb4</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:42:48</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:34:44</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=bef616801b73d41015dfdce7cc4bcbb4"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -9136,10 +9142,10 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 04:04:44</sys_created_on>
         <sys_id>03f656801b73d41015dfdce7cc4bcb17</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 04:04:45</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:32:59</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=03f656801b73d41015dfdce7cc4bcb17"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -9150,31 +9156,29 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-07 04:04:46</sys_created_on>
         <sys_id>6bf656801b73d41015dfdce7cc4bcb75</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 04:04:46</sys_updated_on>
+        <sys_updated_on>2020-10-16 11:32:59</sys_updated_on>
         <value>(function execute(inputs, outputs) {
-if(inputs.statusCode == "200"){
-    try{
-      var responseData = JSON.parse(inputs.responseBody);
-    outputs.status = "Success";
-    outputs.id = responseData.id;
-    outputs.compartmentid = responseData.compartmentId;
-    outputs.displayname = responseData.displayName;
-    outputs.timecreated = responseData.timeCreated;
-    outputs.lifecyclestate = responseData.lifecycleState;
-    outputs.sizeingbs = responseData.sizeInGBs;
-    outputs.sourcetype = responseData.sourceType;
-    outputs.volumegroupid = responseData.volumeGroupId;  
-    outputs.definedtags = responseData.definedTags;
-    outputs.freeformtags = responseData.freeformTags;
-    outputs.volumebackupids = responseData.volumeBackupIds;
-    }
-  catch(ex){
-	throw new Error('JSON Parse Error. Response Body may be empty.');
-  }
-}
- else {
+    if (inputs.statusCode == "200") {
+        try {
+            var responseData = JSON.parse(inputs.responseBody);
+            outputs.status = "Success";
+            outputs.id = responseData.id;
+            outputs.compartmentid = responseData.compartmentId;
+            outputs.displayname = responseData.displayName;
+            outputs.timecreated = responseData.timeCreated;
+            outputs.lifecyclestate = responseData.lifecycleState;
+            outputs.sizeingbs = responseData.sizeInGBs;
+            outputs.sourcetype = responseData.sourceType;
+            outputs.volumegroupid = responseData.volumeGroupId;
+            outputs.definedtags = responseData.definedTags;
+            outputs.freeformtags = responseData.freeformTags;
+            outputs.volumebackupids = responseData.volumeBackupIds;
+        } catch (ex) {
+            throw new Error('JSON Parse Error. Response Body may be empty.');
+        }
+    } else {
         var errMsgs = new OracleBlockStorageErrorHandler().errorHandler(inputs.responseBody);
         outputs.error_message = errMsgs[0];
         outputs.status = errMsgs[1];

@@ -9,11 +9,17 @@
         <category display_value="Volume Backup Management">a10eb5d6db97d0105001d602ca96199d</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Updates the specified volume backup.&lt;/p&gt; 
+&lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume Backup ID&lt;/b&gt; - OCID of the volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name&lt;/b&gt; - Name of the volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Free-form Tags&lt;/b&gt; - Free-form tags for this resource.&lt;/li&gt;
+&lt;/ul&gt; 
+&lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt; 
+&lt;li&gt;&lt;b&gt;Volume Backup ID&lt;/b&gt; - OCID of the volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name&lt;/b&gt; - Name of the volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Time Created&lt;/b&gt; - Date and time at which the volume backup was created.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Lifecycle State&lt;/b&gt; - Current state of the volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Type&lt;/b&gt; - Type of volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume ID&lt;/b&gt; - OCID of the volume.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Source Type&lt;/b&gt; - Specifies whether the backup was created manually, or via scheduled backup policy.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Free-form Tags&lt;/b&gt; - Free-form tags for this resource.&lt;/li&gt;&lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>true</ih_action>
         <internal_name>update_volume_backup</internal_name>
         <label_cache>[{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛Type","type":"action","ref":""},{"name":"{{action.display_name}}","label":"action➛Display Name","type":"action","ref":""},{"name":"{{action.freeform_tags}}","label":"action➛Free-form Tags","type":"action","ref":""},{"name":"{{action.freeform_tags.Tags}}","label":"action➛Free-form Tags➛Tags","type":"action","ref":""},{"name":"{{action.freeform_tags.tags}}","label":"action➛Free-form Tags➛Tags","type":"action","ref":""},{"name":"{{action.freeform_tags.Tag}}","label":"action➛Free-form Tags➛Tag","type":"action","ref":""},{"name":"{{action.freeform_tags.Tag.Name}}","label":"action➛Free-form Tags➛Tag➛Name","type":"action","ref":""},{"name":"{{action.freeform_tags.Tag.Value}}","label":"action➛Free-form Tags➛Tag➛Value","type":"action","ref":""},{"name":"{{action.volume_backup_id}}","label":"action➛Volume Backup ID","type":"action","ref":""},{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{step[a79ec586-0a45-4ba6-b270-ffddc535318e].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[a79ec586-0a45-4ba6-b270-ffddc535318e].payload}}","label":"step➛Pre Processing➛payload","type":"step","ref":""},{"name":"{{step[a9445fe1-d205-41f7-a9ed-89c491d73aee].response_body}}","label":"step➛Update Volume Backup➛Response Body","type":"step","ref":""},{"name":"{{step[a9445fe1-d205-41f7-a9ed-89c491d73aee].status_code}}","label":"step➛Update Volume Backup➛Status Code","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].type}}","label":"step➛Post Processing➛type","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].volumeid}}","label":"step➛Post Processing➛volumeid","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].sourcetype}}","label":"step➛Post Processing➛sourcetype","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].freeformtags}}","label":"step➛Post Processing➛freeformtags","type":"step","ref":""},{"name":"{{step[a79ec586-0a45-4ba6-b270-ffddc535318e].volumebackupid}}","label":"step➛Pre Processing➛volumebackupid","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>493eccdc1bb7d41015dfdce7cc4bcb7f</latest_snapshot>
+        <latest_snapshot>8fdfd9c3db7750505001d602ca9619f0</latest_snapshot>
         <master_snapshot>465ab2eddb6b58105001d602ca9619b7</master_snapshot>
         <name>Update Volume Backup</name>
         <natlang/>
@@ -26,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2a3ac1fe1bd3141015dfdce7cc4bcbca</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Update Volume Backup</sys_name>
         <sys_overrides/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
@@ -34,7 +40,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_2a3ac1fe1bd3141015dfdce7cc4bcbca</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:45:44</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:45:48</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -2483,9 +2489,9 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-05 11:11:22</sys_created_on>
         <sys_id>c17561271be7541015dfdce7cc4bcbba</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:45:28</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:45:28</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c17561271be7541015dfdce7cc4bcbba"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -6209,17 +6215,17 @@ if(inputs.statusCode == "200"){
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Update Volume Backup">2a3ac1fe1bd3141015dfdce7cc4bcbca</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"096a76eddb6b58105001d602ca9619d3","name":"plan"}}</plan>
-        <snapshot>493eccdc1bb7d41015dfdce7cc4bcb7f</snapshot>
+        <snapshot>8fdfd9c3db7750505001d602ca9619f0</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-29 12:14:36</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>096a76eddb6b58105001d602ca9619d3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:45:49</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:45:55</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -6230,7 +6236,13 @@ if(inputs.statusCode == "200"){
         <category display_value="Volume Backup Management">a10eb5d6db97d0105001d602ca96199d</category>
         <copied_from/>
         <copied_from_name/>
-        <description/>
+        <description>&lt;p&gt;Updates the specified volume backup.&lt;/p&gt; 
+&lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume Backup ID&lt;/b&gt; - OCID of the volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name&lt;/b&gt; - Name of the volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Free-form Tags&lt;/b&gt; - Free-form tags for this resource.&lt;/li&gt;
+&lt;/ul&gt; 
+&lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt; 
+&lt;li&gt;&lt;b&gt;Volume Backup ID&lt;/b&gt; - OCID of the volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Display Name&lt;/b&gt; - Name of the volume attachment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Time Created&lt;/b&gt; - Date and time at which the volume backup was created.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Lifecycle State&lt;/b&gt; - Current state of the volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Type&lt;/b&gt; - Type of volume backup.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume ID&lt;/b&gt; - OCID of the volume.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Source Type&lt;/b&gt; - Specifies whether the backup was created manually, or via scheduled backup policy.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Free-form Tags&lt;/b&gt; - Free-form tags for this resource.&lt;/li&gt;&lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>update_volume_backup</internal_name>
         <label_cache>[{"name":"{{action.volume_id}}","label":"action➛Volume ID","type":"action","ref":""},{"name":"{{action.type}}","label":"action➛Type","type":"action","ref":""},{"name":"{{action.display_name}}","label":"action➛Display Name","type":"action","ref":""},{"name":"{{action.freeform_tags}}","label":"action➛Free-form Tags","type":"action","ref":""},{"name":"{{action.freeform_tags.Tags}}","label":"action➛Free-form Tags➛Tags","type":"action","ref":""},{"name":"{{action.freeform_tags.tags}}","label":"action➛Free-form Tags➛Tags","type":"action","ref":""},{"name":"{{action.freeform_tags.Tag}}","label":"action➛Free-form Tags➛Tag","type":"action","ref":""},{"name":"{{action.freeform_tags.Tag.Name}}","label":"action➛Free-form Tags➛Tag➛Name","type":"action","ref":""},{"name":"{{action.freeform_tags.Tag.Value}}","label":"action➛Free-form Tags➛Tag➛Value","type":"action","ref":""},{"name":"{{action.volume_backup_id}}","label":"action➛Volume Backup ID","type":"action","ref":""},{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{step[a79ec586-0a45-4ba6-b270-ffddc535318e].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[a79ec586-0a45-4ba6-b270-ffddc535318e].payload}}","label":"step➛Pre Processing➛payload","type":"step","ref":""},{"name":"{{step[a9445fe1-d205-41f7-a9ed-89c491d73aee].response_body}}","label":"step➛Update Volume Backup➛Response Body","type":"step","ref":""},{"name":"{{step[a9445fe1-d205-41f7-a9ed-89c491d73aee].status_code}}","label":"step➛Update Volume Backup➛Status Code","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].id}}","label":"step➛Post Processing➛id","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].compartmentid}}","label":"step➛Post Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].displayname}}","label":"step➛Post Processing➛displayname","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].timecreated}}","label":"step➛Post Processing➛timecreated","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].lifecyclestate}}","label":"step➛Post Processing➛lifecyclestate","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].type}}","label":"step➛Post Processing➛type","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].volumeid}}","label":"step➛Post Processing➛volumeid","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].sourcetype}}","label":"step➛Post Processing➛sourcetype","type":"step","ref":""},{"name":"{{step[b36f7799-0e2c-4279-88ab-3b4299e9bc45].freeformtags}}","label":"step➛Post Processing➛freeformtags","type":"step","ref":""},{"name":"{{step[a79ec586-0a45-4ba6-b270-ffddc535318e].volumebackupid}}","label":"step➛Pre Processing➛volumebackupid","type":"step","ref":""}]</label_cache>
         <master>true</master>
@@ -6245,7 +6257,7 @@ if(inputs.statusCode == "200"){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>465ab2eddb6b58105001d602ca9619b7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -6253,7 +6265,7 @@ if(inputs.statusCode == "200"){
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-06 09:18:43</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:45:45</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -8498,7 +8510,7 @@ if(inputs.statusCode == "200"){
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=Tag,child_name=Tag,child_type=object,child_type_label=Object,child_uiUniqueId=61ff562e-b3dc-4ec3-a19d-5d588e333f41,co_type_name=FD923e00105af7d410b2ce55cd805160da,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=d69fc7f9-771e-453d-8e61-35059f46f37e</attributes>
+        <attributes>child_label=Tag,child_name=Tag,child_type=object,child_type_label=Object,child_uiUniqueId=61ff562e-b3dc-4ec3-a19d-5d588e333f41,co_type_name=FD10ef5dc3597750502c9684447498da58,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=d69fc7f9-771e-453d-8e61-35059f46f37e</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -8556,14 +8568,14 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-29 12:14:25</sys_created_on>
         <sys_id>5e5ab2eddb6b58105001d602ca9619ea</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:45:41</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:45:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -8745,9 +8757,9 @@ if(inputs.statusCode == "200"){
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-05 11:12:03</sys_created_on>
         <sys_id>1b95e5271be7541015dfdce7cc4bcb7e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-07 12:45:41</sys_updated_on>
+        <sys_updated_on>2020-10-16 07:45:45</sys_updated_on>
     </sys_hub_action_input_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1b95e5271be7541015dfdce7cc4bcb7e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
