@@ -35,5 +35,24 @@
             <sys_updated_on>2020-10-05 10:27:00</sys_updated_on>
             <value/>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>volumeid</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>demo</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_86b4784adb5790105001d602ca96192e</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-22 08:52:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2b982049db0ce4505001d602ca961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-22 08:52:10</sys_updated_on>
+            <value>ocid1.volume.oc1.ap-mumbai-1.abrg6ljr2hl4tmj7w3jwobqjidkqwywtmijda4pdyf2kz37dws2xh7s7i6yq</value>
+        </sys_choice>
     </sys_choice>
 </record_update>

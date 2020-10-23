@@ -11,15 +11,15 @@
         <copied_from_name/>
         <description>&lt;p&gt;Retrieves list of the volume groups in the specified compartment.&lt;/p&gt; 
 &lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
-&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Tenancy ID&lt;/b&gt; - OCID of the tenancy.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
-&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt;&lt;li&gt;&lt;b&gt;Output&lt;/b&gt; - Contains a list of volume group names and IDs.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume Group List&lt;/b&gt; - An array of object with list of volume group details.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Response Body&lt;/b&gt; - JSON response contains a list of volume group details.&lt;/li&gt;
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt;&lt;li&gt;&lt;b&gt;Output&lt;/b&gt; - JSON object containing a list of volume group names and ids.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume Group List&lt;/b&gt; - An array of object containing list of volume group details.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Response Body&lt;/b&gt; - Response containing a list of volume group details.&lt;/li&gt;
 &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <ih_action>true</ih_action>
         <internal_name>look_up_volume_groups</internal_name>
-        <label_cache>[{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{step[adae2401-95e5-4877-b5cc-8b4126235eb4].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[adae2401-95e5-4877-b5cc-8b4126235eb4].compartmentid}}","label":"step➛Pre Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[1cb26322-0601-48f7-b38c-a13ef74fa0cc].status_code}}","label":"step➛Look up Volume Groups➛Status Code","type":"step","ref":""},{"name":"{{step[1cb26322-0601-48f7-b38c-a13ef74fa0cc].response_body}}","label":"step➛Look up Volume Groups➛Response Body","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable2}}","label":"step➛Post Processing➛variable2","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].documents}}","label":"step➛Post Processing➛documents","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list}}","label":"step➛Post Processing➛volume_group_list","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group}}","label":"step➛Post Processing➛volume_group_list➛Volume Group","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child1}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child1","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.id}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child2}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child2","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child3}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child3","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Compartment_ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Compartment ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.compartmentId}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Compartment ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Display_Name}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Display Name","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.displayName}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Display Name","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child4}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child4","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.lifecycle_State}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛lifecycle State","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.lifecycleState}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Lifecycle State","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child5}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child5","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Size_In_GBs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Size In GBs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.sizeInGBs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Size In GBs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child6}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child6","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Volume_IDs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds.Volume_ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs➛Volume ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds.volumeid}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs➛Volume ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child7}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child7","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Time_Created}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Time Created","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.timeCreated}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Time Created","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].response_body}}","label":"step➛Post Processing➛response_body","type":"step","ref":""}]</label_cache>
-        <latest_snapshot>1cfe57c7db3f50505001d602ca961908</latest_snapshot>
+        <label_cache>[{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{action.tenancy_id}}","label":"action➛Tenancy ID","type":"action","ref":""},{"name":"{{step[adae2401-95e5-4877-b5cc-8b4126235eb4].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[adae2401-95e5-4877-b5cc-8b4126235eb4].compartmentid}}","label":"step➛Pre Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[1cb26322-0601-48f7-b38c-a13ef74fa0cc].status_code}}","label":"step➛Look up Volume Groups➛Status Code","type":"step","ref":""},{"name":"{{step[1cb26322-0601-48f7-b38c-a13ef74fa0cc].response_body}}","label":"step➛Look up Volume Groups➛Response Body","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable2}}","label":"step➛Post Processing➛variable2","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].documents}}","label":"step➛Post Processing➛documents","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list}}","label":"step➛Post Processing➛volume_group_list","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group}}","label":"step➛Post Processing➛volume_group_list➛Volume Group","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child1}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child1","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.id}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child2}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child2","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child3}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child3","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Compartment_ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Compartment ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.compartmentId}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Compartment ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Display_Name}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Display Name","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.displayName}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Display Name","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child4}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child4","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.lifecycle_State}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛lifecycle State","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.lifecycleState}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Lifecycle State","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child5}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child5","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Size_In_GBs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Size In GBs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.sizeInGBs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Size In GBs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child6}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child6","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Volume_IDs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds.Volume_ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs➛Volume ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds.volumeid}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs➛Volume ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child7}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child7","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Time_Created}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Time Created","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.timeCreated}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Time Created","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].response_body}}","label":"step➛Post Processing➛response_body","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>05c23d59db8c28505001d602ca9619a2</latest_snapshot>
         <master_snapshot>fe5b66771ba7941015dfdce7cc4bcb4a</master_snapshot>
         <name>Look up Volume Groups</name>
         <natlang/>
@@ -32,15 +32,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8711190f1b13541015dfdce7cc4bcb22</sys_id>
-        <sys_mod_count>78</sys_mod_count>
+        <sys_mod_count>89</sys_mod_count>
         <sys_name>Look up Volume Groups</sys_name>
         <sys_overrides/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_8711190f1b13541015dfdce7cc4bcb22</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 17:00:59</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:09</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -160,10 +160,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:50</sys_created_on>
         <sys_id>0311190f1b13541015dfdce7cc4bcb69</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:12:21</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:12</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0311190f1b13541015dfdce7cc4bcb69"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -438,14 +438,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:50</sys_created_on>
         <sys_id>d711190f1b13541015dfdce7cc4bcb6f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:50</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -473,10 +473,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:49</sys_created_on>
         <sys_id>4711190f1b13541015dfdce7cc4bcb2e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:49</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:01</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4711190f1b13541015dfdce7cc4bcb2e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -487,14 +487,19 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:49</sys_created_on>
         <sys_id>4311190f1b13541015dfdce7cc4bcb4d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:49</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:02</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     var obs = new OracleBlockStorageUtils();
     obs.validateInputVariables(inputs, outputs);
-    obs.validateMandatoryVariables(inputs, ["compartmentid"]);
+    obs.validateMandatoryVariables(inputs, ["tenancyid"]);
     obs.maptoOutputFromInput(inputs, outputs, ["compartmentid"]);
+    if (inputs.tenancyid &amp;&amp; inputs.compartmentid) {
+        outputs.compartmentid = inputs.compartmentid;
+    } else {
+        outputs.compartmentid = inputs.tenancyid;
+    }
 })(inputs, outputs);</value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
@@ -549,7 +554,19 @@
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=4711190f1b13541015dfdce7cc4bcb2e^sys_idNOT IN8711190f1b13541015dfdce7cc4bcb31"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tenancyid</field>
+        <id>4711190f1b13541015dfdce7cc4bcb2e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:12:02</sys_created_on>
+        <sys_id>c612b4d5db8828505001d602ca9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:12:02</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_4711190f1b13541015dfdce7cc4bcb2e</table>
+        <value>{{action.tenancy_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=4711190f1b13541015dfdce7cc4bcb2e^sys_idNOT IN8711190f1b13541015dfdce7cc4bcb31,f512b4d5db8828505001d602ca9619a9"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -620,6 +637,87 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-09-21 10:12:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tenancyid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Pre Processing">4711190f1b13541015dfdce7cc4bcb2e</model>
+        <model_id>4711190f1b13541015dfdce7cc4bcb2e</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_4711190f1b13541015dfdce7cc4bcb2e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:12:01</sys_created_on>
+        <sys_id>f512b4d5db8828505001d602ca9619a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:12:01</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -729,10 +827,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:50</sys_created_on>
         <sys_id>5b11190f1b13541015dfdce7cc4bcb8d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:44</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:51</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5b11190f1b13541015dfdce7cc4bcb8d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -743,9 +841,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:51</sys_created_on>
         <sys_id>ab11190f1b13541015dfdce7cc4bcbb4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:44</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:51</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     var data = new Array();
     var document;
@@ -755,7 +853,7 @@
         try {
             var response_json = JSON.parse(inputs.responseBody);
             outputs.volume_group_list = response_json;
-          	outputs.response_body = inputs.responseBody;
+            outputs.response_body = inputs.responseBody;
             for (var i = 0; i &lt; response_json.length; i++) {
                 var document = new Object();
                 document.label = response_json[i].displayName;
@@ -772,8 +870,7 @@
             outputs.documents = documents;
             outputs.status = "Success";
         }
-    } 
-  else {
+    } else {
         var errMsgs = new OracleBlockStorageErrorHandler().errorHandler(inputs.responseBody);
         outputs.error_message = errMsgs[0];
         outputs.status = errMsgs[1];
@@ -1007,7 +1104,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=5b11190f1b13541015dfdce7cc4bcb8d^sys_idNOT IN9b11190f1b13541015dfdce7cc4bcb9c,ab11190f1b13541015dfdce7cc4bcba6,c90f5e0d1b33981015dfdce7cc4bcbfe,e311190f1b13541015dfdce7cc4bcbac,f80f5e0d1b33981015dfdce7cc4bcbf8"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=5b11190f1b13541015dfdce7cc4bcb8d^sys_idNOT IN9b11190f1b13541015dfdce7cc4bcb9c,ab11190f1b13541015dfdce7cc4bcba6,de12f4d5db8828505001d602ca961907,e311190f1b13541015dfdce7cc4bcbac,f80f5e0d1b33981015dfdce7cc4bcbf8"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1174,7 +1271,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=fb42243b-3469-473f-a120-572a2e2fb855</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=fb42243b-3469-473f-a120-572a2e2fb855</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1205,10 +1302,10 @@
         <function_field>false</function_field>
         <help/>
         <hint/>
-        <internal_type display_value="JSON">json</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <label>response_body</label>
         <mandatory>true</mandatory>
-        <max_length>4000</max_length>
+        <max_length>8000</max_length>
         <model display_value="Post Processing">5b11190f1b13541015dfdce7cc4bcb8d</model>
         <model_id>5b11190f1b13541015dfdce7cc4bcb8d</model_id>
         <model_table>sys_hub_step_instance</model_table>
@@ -1230,8 +1327,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_step_ext_output</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-10 07:13:44</sys_created_on>
-        <sys_id>c90f5e0d1b33981015dfdce7cc4bcbfe</sys_id>
+        <sys_created_on>2020-10-23 04:12:03</sys_created_on>
+        <sys_id>de12f4d5db8828505001d602ca961907</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -1239,7 +1336,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:44</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1413,12 +1510,120 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN8311190f1b13541015dfdce7cc4bcb27"/>
+    <sys_hub_action_input action="delete_multiple" query="model=8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN2512b4d5db8828505001d602ca961989,d112b4d5db8828505001d602ca961948"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=6512f22e-3e30-4009-a977-cb1c5d782998</attributes>
+        <attributes>dynamic=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=6512f22e-3e30-4009-a977-cb1c5d782998</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>compartment_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Compartment ID</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Look up Volume Groups">8711190f1b13541015dfdce7cc4bcb22</model>
+        <model_id>8711190f1b13541015dfdce7cc4bcb22</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_8711190f1b13541015dfdce7cc4bcb22</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:12:00</sys_created_on>
+        <sys_id>2512b4d5db8828505001d602ca961989</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 09:05:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2512b4d5db8828505001d602ca961989^sys_idNOT INa112b4d5db8828505001d602ca96199e"/>
+    <sys_hub_action_input_action_instance action="INSERT_OR_UPDATE">
+        <action_input display_value="">2512b4d5db8828505001d602ca961989</action_input>
+        <action_inputs/>
+        <action_type display_value="Look up Compartments">5d1c61eedb0b1c105be372143996195e</action_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:12:01</sys_created_on>
+        <sys_id>a112b4d5db8828505001d602ca96199e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 08:54:30</sys_updated_on>
+    </sys_hub_action_input_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a112b4d5db8828505001d602ca96199e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_input_action_instance</document>
+        <document_key>a112b4d5db8828505001d602ca96199e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:12:01</sys_created_on>
+        <sys_id>e512b4d5db8828505001d602ca96199f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:12:01</sys_updated_on>
+        <value>{{action.tenancy_id}}</value>
+        <variable display_value="">251c61eedb0b1c105be3721439961963</variable>
+    </sys_variable_value>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1f3c9f32-9f4b-463c-b4b8-b161ad38287d</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1442,7 +1647,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>compartment_id</element>
+        <element>tenancy_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -1450,7 +1655,7 @@
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>Compartment ID</label>
+        <label>Tenancy ID</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Look up Volume Groups">8711190f1b13541015dfdce7cc4bcb22</model>
@@ -1474,16 +1679,16 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-09-21 10:09:49</sys_created_on>
-        <sys_id>8311190f1b13541015dfdce7cc4bcb27</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_created_on>2020-10-23 04:11:59</sys_created_on>
+        <sys_id>d112b4d5db8828505001d602ca961948</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:49</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:17</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1495,12 +1700,12 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
-    <sys_hub_action_output action="delete_multiple" query="model=8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN028efd43dbf750505001d602ca961981,6711190f1b13541015dfdce7cc4bcbc8,6b11190f1b13541015dfdce7cc4bcbb8,ab11190f1b13541015dfdce7cc4bcbc2,e20ab4f6db7710505001d602ca96191f"/>
+    <sys_hub_action_output action="delete_multiple" query="model=8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN3a12f4d5db8828505001d602ca961956,6711190f1b13541015dfdce7cc4bcbc8,6b11190f1b13541015dfdce7cc4bcbb8,ab11190f1b13541015dfdce7cc4bcbc2,e20ab4f6db7710505001d602ca96191f"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=cf14df90-9ed3-415a-a3f8-0e3aa10d515b</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=cf14df90-9ed3-415a-a3f8-0e3aa10d515b</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1533,10 +1738,10 @@
         <help/>
         <hint/>
         <internal_link/>
-        <internal_type display_value="JSON">json</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <label>Response Body</label>
         <mandatory>false</mandatory>
-        <max_length>4000</max_length>
+        <max_length>8000</max_length>
         <model display_value="Look up Volume Groups">8711190f1b13541015dfdce7cc4bcb22</model>
         <model_id>8711190f1b13541015dfdce7cc4bcb22</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
@@ -1558,16 +1763,16 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_action_output</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-16 09:59:40</sys_created_on>
-        <sys_id>028efd43dbf750505001d602ca961981</sys_id>
+        <sys_created_on>2020-10-23 04:12:05</sys_created_on>
+        <sys_id>3a12f4d5db8828505001d602ca961956</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 16:50:34</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1643,14 +1848,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:52</sys_created_on>
         <sys_id>6711190f1b13541015dfdce7cc4bcbc8</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 16:50:34</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1726,14 +1931,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:51</sys_created_on>
         <sys_id>6b11190f1b13541015dfdce7cc4bcbb8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:51</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1809,14 +2014,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:52</sys_created_on>
         <sys_id>ab11190f1b13541015dfdce7cc4bcbc2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:52</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1892,14 +2097,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-15 10:21:56</sys_created_on>
         <sys_id>e20ab4f6db7710505001d602ca96191f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 16:50:34</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1928,10 +2133,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:50</sys_created_on>
         <sys_id>0311190f1b13541015dfdce7cc4bcb69</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:12:21</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:12</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0311190f1b13541015dfdce7cc4bcb69"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2206,14 +2411,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:50</sys_created_on>
         <sys_id>d711190f1b13541015dfdce7cc4bcb6f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
-        <sys_policy/>
+        <sys_policy>read</sys_policy>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:50</sys_updated_on>
+        <sys_updated_on>2020-10-23 09:05:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2241,10 +2446,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:49</sys_created_on>
         <sys_id>4711190f1b13541015dfdce7cc4bcb2e</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:49</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:01</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4711190f1b13541015dfdce7cc4bcb2e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2255,14 +2460,19 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:49</sys_created_on>
         <sys_id>4311190f1b13541015dfdce7cc4bcb4d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:49</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:02</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     var obs = new OracleBlockStorageUtils();
     obs.validateInputVariables(inputs, outputs);
-    obs.validateMandatoryVariables(inputs, ["compartmentid"]);
+    obs.validateMandatoryVariables(inputs, ["tenancyid"]);
     obs.maptoOutputFromInput(inputs, outputs, ["compartmentid"]);
+    if (inputs.tenancyid &amp;&amp; inputs.compartmentid) {
+        outputs.compartmentid = inputs.compartmentid;
+    } else {
+        outputs.compartmentid = inputs.tenancyid;
+    }
 })(inputs, outputs);</value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
@@ -2317,7 +2527,19 @@
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=4711190f1b13541015dfdce7cc4bcb2e^sys_idNOT IN8711190f1b13541015dfdce7cc4bcb31"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tenancyid</field>
+        <id>4711190f1b13541015dfdce7cc4bcb2e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:12:02</sys_created_on>
+        <sys_id>c612b4d5db8828505001d602ca9619b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:12:02</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_4711190f1b13541015dfdce7cc4bcb2e</table>
+        <value>{{action.tenancy_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=4711190f1b13541015dfdce7cc4bcb2e^sys_idNOT IN8711190f1b13541015dfdce7cc4bcb31,f512b4d5db8828505001d602ca9619a9"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2388,6 +2610,87 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-09-21 10:12:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tenancyid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Pre Processing">4711190f1b13541015dfdce7cc4bcb2e</model>
+        <model_id>4711190f1b13541015dfdce7cc4bcb2e</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_4711190f1b13541015dfdce7cc4bcb2e</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:12:01</sys_created_on>
+        <sys_id>f512b4d5db8828505001d602ca9619a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:12:01</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2497,10 +2800,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:50</sys_created_on>
         <sys_id>5b11190f1b13541015dfdce7cc4bcb8d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:44</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:51</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5b11190f1b13541015dfdce7cc4bcb8d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2511,9 +2814,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-09-21 10:09:51</sys_created_on>
         <sys_id>ab11190f1b13541015dfdce7cc4bcbb4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:44</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:51</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     var data = new Array();
     var document;
@@ -2523,7 +2826,7 @@
         try {
             var response_json = JSON.parse(inputs.responseBody);
             outputs.volume_group_list = response_json;
-          	outputs.response_body = inputs.responseBody;
+            outputs.response_body = inputs.responseBody;
             for (var i = 0; i &lt; response_json.length; i++) {
                 var document = new Object();
                 document.label = response_json[i].displayName;
@@ -2540,8 +2843,7 @@
             outputs.documents = documents;
             outputs.status = "Success";
         }
-    } 
-  else {
+    } else {
         var errMsgs = new OracleBlockStorageErrorHandler().errorHandler(inputs.responseBody);
         outputs.error_message = errMsgs[0];
         outputs.status = errMsgs[1];
@@ -2775,7 +3077,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=5b11190f1b13541015dfdce7cc4bcb8d^sys_idNOT IN9b11190f1b13541015dfdce7cc4bcb9c,ab11190f1b13541015dfdce7cc4bcba6,c90f5e0d1b33981015dfdce7cc4bcbfe,e311190f1b13541015dfdce7cc4bcbac,f80f5e0d1b33981015dfdce7cc4bcbf8"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=5b11190f1b13541015dfdce7cc4bcb8d^sys_idNOT IN9b11190f1b13541015dfdce7cc4bcb9c,ab11190f1b13541015dfdce7cc4bcba6,de12f4d5db8828505001d602ca961907,e311190f1b13541015dfdce7cc4bcbac,f80f5e0d1b33981015dfdce7cc4bcbf8"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2942,7 +3244,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=fb42243b-3469-473f-a120-572a2e2fb855</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=fb42243b-3469-473f-a120-572a2e2fb855</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -2973,10 +3275,10 @@
         <function_field>false</function_field>
         <help/>
         <hint/>
-        <internal_type display_value="JSON">json</internal_type>
+        <internal_type display_value="String">string</internal_type>
         <label>response_body</label>
         <mandatory>true</mandatory>
-        <max_length>4000</max_length>
+        <max_length>8000</max_length>
         <model display_value="Post Processing">5b11190f1b13541015dfdce7cc4bcb8d</model>
         <model_id>5b11190f1b13541015dfdce7cc4bcb8d</model_id>
         <model_table>sys_hub_step_instance</model_table>
@@ -2998,8 +3300,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_step_ext_output</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-10 07:13:44</sys_created_on>
-        <sys_id>c90f5e0d1b33981015dfdce7cc4bcbfe</sys_id>
+        <sys_created_on>2020-10-23 04:12:03</sys_created_on>
+        <sys_id>de12f4d5db8828505001d602ca961907</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -3007,7 +3309,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:44</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -3181,7 +3483,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN8311190f1b13541015dfdce7cc4bcb2c"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN2112b4d5db8828505001d602ca96199d,5512b4d5db8828505001d602ca961950"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>compartment_id</element>
         <help/>
@@ -3192,8 +3494,8 @@
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-09-21 10:09:49</sys_created_on>
-        <sys_id>8311190f1b13541015dfdce7cc4bcb2c</sys_id>
+        <sys_created_on>2020-10-23 04:12:00</sys_created_on>
+        <sys_id>2112b4d5db8828505001d602ca96199d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
@@ -3201,11 +3503,56 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-09-21 10:09:49</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:12:00</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN3f11190f1b13541015dfdce7cc4bcbcc,868efd43dbf750505001d602ca961985,a311190f1b13541015dfdce7cc4bcbc7,e20ab4f6db7710505001d602ca961924,e711190f1b13541015dfdce7cc4bcbc1"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>tenancy_id</element>
+        <help/>
+        <hint/>
+        <label>Tenancy ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_8711190f1b13541015dfdce7cc4bcb22</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:11:59</sys_created_on>
+        <sys_id>5512b4d5db8828505001d602ca961950</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:11:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN2142b8d5db8828505001d602ca961959"/>
+    <sys_choice field="compartment_id" table="var__m_sys_hub_action_input_8711190f1b13541015dfdce7cc4bcb22">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>compartment_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_8711190f1b13541015dfdce7cc4bcb22</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-23 04:12:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2142b8d5db8828505001d602ca961959</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-23 04:12:49</sys_updated_on>
+            <value/>
+        </sys_choice>
+    </sys_choice>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_8711190f1b13541015dfdce7cc4bcb22^sys_idNOT IN3f11190f1b13541015dfdce7cc4bcbcc,a311190f1b13541015dfdce7cc4bcbc7,b612f4d5db8828505001d602ca96195b,e20ab4f6db7710505001d602ca961924,e711190f1b13541015dfdce7cc4bcbc1"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>output</element>
         <help/>
@@ -3230,29 +3577,6 @@
         <url_target/>
     </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
-        <element>responsebody</element>
-        <help/>
-        <hint/>
-        <label>Response Body</label>
-        <language>en</language>
-        <name>var__m_sys_hub_action_output_8711190f1b13541015dfdce7cc4bcb22</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-16 09:59:40</sys_created_on>
-        <sys_id>868efd43dbf750505001d602ca961985</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 09:59:40</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
-    <sys_documentation action="INSERT_OR_UPDATE">
         <element>errormessage</element>
         <help/>
         <hint/>
@@ -3272,6 +3596,29 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-09-21 10:09:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>responsebody</element>
+        <help/>
+        <hint/>
+        <label>Response Body</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8711190f1b13541015dfdce7cc4bcb22</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:12:05</sys_created_on>
+        <sys_id>b612f4d5db8828505001d602ca96195b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:12:05</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -3385,17 +3732,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Look up Volume Groups">8711190f1b13541015dfdce7cc4bcb22</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"4d6ba6771ba7941015dfdce7cc4bcbec","name":"plan"}}</plan>
-        <snapshot>1cfe57c7db3f50505001d602ca961908</snapshot>
+        <snapshot>05c23d59db8c28505001d602ca9619a2</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:24</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4d6ba6771ba7941015dfdce7cc4bcbec</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 17:01:04</sys_updated_on>
+        <sys_updated_on>2020-10-23 08:54:49</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -3408,13 +3755,13 @@
         <copied_from_name/>
         <description>&lt;p&gt;Retrieves list of the volume groups in the specified compartment.&lt;/p&gt; 
 &lt;p&gt; &lt;b&gt;Inputs&lt;/b&gt; : &lt;/p&gt; 
-&lt;ul&gt; &lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;
+&lt;ul&gt; &lt;li&gt;&lt;b&gt;Tenancy ID&lt;/b&gt; - OCID of the tenancy.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Compartment ID&lt;/b&gt; - OCID of the compartment.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt; &lt;b&gt;Outputs&lt;/b&gt; : &lt;/p&gt; 
-&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt;&lt;li&gt;&lt;b&gt;Output&lt;/b&gt; - Contains a list of volume group names and IDs.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume Group List&lt;/b&gt; - An array of object with list of volume group details.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Response Body&lt;/b&gt; - JSON response contains a list of volume group details.&lt;/li&gt;
+&lt;ul&gt; &lt;li&gt; &lt;b&gt;Status&lt;/b&gt; - If the request is executed successfully, Status is set to "Success". If there is a failure, Status is set to "Error". &lt;/li&gt; &lt;li&gt; &lt;b&gt;Error Message&lt;/b&gt; - Reason for error, along with code. Populated only when an error occurs. &lt;/li&gt;&lt;li&gt;&lt;b&gt;Output&lt;/b&gt; - JSON object containing a list of volume group names and ids.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Volume Group List&lt;/b&gt; - An array of object containing list of volume group details.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Response Body&lt;/b&gt; - Response containing a list of volume group details.&lt;/li&gt;
 &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Error Messages&lt;/b&gt; : &lt;/p&gt; &lt;ul&gt; &lt;li&gt;Bad Request.&lt;/li&gt; &lt;li&gt;Unauthorized.&lt;/li&gt; &lt;li&gt;Not Found.&lt;/li&gt; &lt;li&gt;Internal Server Error.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To use this action, the corresponding Oracle connection and credential must be created and associated with the Oracle Connection &amp; Credential alias. &lt;a target='_blank' href='http://docs.servicenow.com/?context=CSHelp:credentials-connections-alias'&gt;Learn More&lt;/a&gt; &lt;/p&gt; &lt;p&gt;&lt;/p&gt; &lt;p&gt; &lt;b&gt;Note&lt;/b&gt;: Requires a subscription for production use. &lt;a target='_blank' href='https://docs.servicenow.com/?context=CSHelp:IntegrationHub-licensing-information'&gt;Read More&lt;/a&gt;.&lt;/p&gt;</description>
         <internal_name>look_up_volume_groups</internal_name>
-        <label_cache>[{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{step[adae2401-95e5-4877-b5cc-8b4126235eb4].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[adae2401-95e5-4877-b5cc-8b4126235eb4].compartmentid}}","label":"step➛Pre Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[1cb26322-0601-48f7-b38c-a13ef74fa0cc].status_code}}","label":"step➛Look up Volume Groups➛Status Code","type":"step","ref":""},{"name":"{{step[1cb26322-0601-48f7-b38c-a13ef74fa0cc].response_body}}","label":"step➛Look up Volume Groups➛Response Body","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable2}}","label":"step➛Post Processing➛variable2","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].documents}}","label":"step➛Post Processing➛documents","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list}}","label":"step➛Post Processing➛volume_group_list","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group}}","label":"step➛Post Processing➛volume_group_list➛Volume Group","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child1}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child1","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.id}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child2}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child2","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child3}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child3","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Compartment_ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Compartment ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.compartmentId}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Compartment ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Display_Name}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Display Name","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.displayName}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Display Name","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child4}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child4","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.lifecycle_State}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛lifecycle State","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.lifecycleState}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Lifecycle State","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child5}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child5","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Size_In_GBs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Size In GBs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.sizeInGBs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Size In GBs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child6}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child6","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Volume_IDs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds.Volume_ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs➛Volume ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds.volumeid}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs➛Volume ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child7}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child7","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Time_Created}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Time Created","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.timeCreated}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Time Created","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].response_body}}","label":"step➛Post Processing➛response_body","type":"step","ref":""}]</label_cache>
+        <label_cache>[{"name":"{{action.compartment_id}}","label":"action➛Compartment ID","type":"action","ref":""},{"name":"{{action.tenancy_id}}","label":"action➛Tenancy ID","type":"action","ref":""},{"name":"{{step[adae2401-95e5-4877-b5cc-8b4126235eb4].variable}}","label":"step➛Pre Processing➛variable","type":"step","ref":""},{"name":"{{step[adae2401-95e5-4877-b5cc-8b4126235eb4].compartmentid}}","label":"step➛Pre Processing➛compartmentid","type":"step","ref":""},{"name":"{{step[1cb26322-0601-48f7-b38c-a13ef74fa0cc].status_code}}","label":"step➛Look up Volume Groups➛Status Code","type":"step","ref":""},{"name":"{{step[1cb26322-0601-48f7-b38c-a13ef74fa0cc].response_body}}","label":"step➛Look up Volume Groups➛Response Body","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable}}","label":"step➛Post Processing➛variable","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable1}}","label":"step➛Post Processing➛variable1","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].variable2}}","label":"step➛Post Processing➛variable2","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].status}}","label":"step➛Post Processing➛status","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].error_message}}","label":"step➛Post Processing➛error_message","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].documents}}","label":"step➛Post Processing➛documents","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list}}","label":"step➛Post Processing➛volume_group_list","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group}}","label":"step➛Post Processing➛volume_group_list➛Volume Group","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child1}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child1","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.id}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child2}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child2","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child3}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child3","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Compartment_ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Compartment ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.compartmentId}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Compartment ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Display_Name}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Display Name","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.displayName}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Display Name","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child4}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child4","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.lifecycle_State}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛lifecycle State","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.lifecycleState}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Lifecycle State","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child5}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child5","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Size_In_GBs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Size In GBs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.sizeInGBs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Size In GBs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child6}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child6","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Volume_IDs}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds.Volume_ID}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs➛Volume ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volumeIds.volumeid}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume IDs➛Volume ID","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.volume_group_child7}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Volume Group_child7","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.Time_Created}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Time Created","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].volume_group_list.Volume_Group.timeCreated}}","label":"step➛Post Processing➛volume_group_list➛Volume Group➛Time Created","type":"step","ref":""},{"name":"{{step[4c16ca9b-c23d-4ed9-a078-3c4cf282578e].response_body}}","label":"step➛Post Processing➛response_body","type":"step","ref":""}]</label_cache>
         <master>true</master>
         <name>Look up Volume Groups</name>
         <natlang/>
@@ -3427,7 +3774,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fe5b66771ba7941015dfdce7cc4bcb4a</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -3435,7 +3782,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 17:00:57</sys_updated_on>
+        <sys_updated_on>2020-10-23 08:54:41</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -3555,10 +3902,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:16</sys_created_on>
         <sys_id>0b5b66771ba7941015dfdce7cc4bcb80</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:54</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:03</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0b5b66771ba7941015dfdce7cc4bcb80"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3569,9 +3916,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:18</sys_created_on>
         <sys_id>6f5b66771ba7941015dfdce7cc4bcbcc</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:54</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:03</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     var data = new Array();
     var document;
@@ -3581,7 +3928,7 @@
         try {
             var response_json = JSON.parse(inputs.responseBody);
             outputs.volume_group_list = response_json;
-          	outputs.response_body = inputs.responseBody;
+            outputs.response_body = inputs.responseBody;
             for (var i = 0; i &lt; response_json.length; i++) {
                 var document = new Object();
                 document.label = response_json[i].displayName;
@@ -3598,8 +3945,7 @@
             outputs.documents = documents;
             outputs.status = "Success";
         }
-    } 
-  else {
+    } else {
         var errMsgs = new OracleBlockStorageErrorHandler().errorHandler(inputs.responseBody);
         outputs.error_message = errMsgs[0];
         outputs.status = errMsgs[1];
@@ -3833,7 +4179,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=0b5b66771ba7941015dfdce7cc4bcb80^sys_idNOT IN1b5b66771ba7941015dfdce7cc4bcb8f,2b5b66771ba7941015dfdce7cc4bcb99,9f0f124d1b33981015dfdce7cc4bcb0c,9f0f124d1b33981015dfdce7cc4bcb12,a75b66771ba7941015dfdce7cc4bcbc4"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=0b5b66771ba7941015dfdce7cc4bcb80^sys_idNOT IN1b5b66771ba7941015dfdce7cc4bcb8f,2b5b66771ba7941015dfdce7cc4bcb99,9f0f124d1b33981015dfdce7cc4bcb0c,a75b66771ba7941015dfdce7cc4bcbc4,b4527cd5db8828505001d602ca96192a"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -4000,7 +4346,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=Volume Group,child_name=Volume_Group,child_type=object,child_type_label=Object,child_uiUniqueId=8d71a5e5-aa32-4003-a5d1-9e66160766bf,co_type_name=FD5dfe97c7c03f5050cb9e19dfbe310d45,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=73fbe23b-0a47-4405-963b-d30c24cb4e70</attributes>
+        <attributes>child_label=Volume Group,child_name=Volume_Group,child_type=object,child_type_label=Object,child_uiUniqueId=8d71a5e5-aa32-4003-a5d1-9e66160766bf,co_type_name=FDeec27d59888c28500302b2c8ae7f1ec9,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=73fbe23b-0a47-4405-963b-d30c24cb4e70</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -4058,95 +4404,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-10 07:13:54</sys_created_on>
         <sys_id>9f0f124d1b33981015dfdce7cc4bcb0c</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 17:00:58</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_output>
-    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=fb42243b-3469-473f-a120-572a2e2fb855</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>response_body</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="JSON">json</internal_type>
-        <label>response_body</label>
-        <mandatory>true</mandatory>
-        <max_length>4000</max_length>
-        <model display_value="Post Processing">0b5b66771ba7941015dfdce7cc4bcb80</model>
-        <model_id>0b5b66771ba7941015dfdce7cc4bcb80</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_output_0b5b66771ba7941015dfdce7cc4bcb80</name>
-        <next_element/>
-        <order>5</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-10 07:13:54</sys_created_on>
-        <sys_id>9f0f124d1b33981015dfdce7cc4bcb12</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:54</sys_updated_on>
+        <sys_updated_on>2020-10-23 08:54:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4239,6 +4504,87 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=fb42243b-3469-473f-a120-572a2e2fb855</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>response_body</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>response_body</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Post Processing">0b5b66771ba7941015dfdce7cc4bcb80</model>
+        <model_id>0b5b66771ba7941015dfdce7cc4bcb80</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_0b5b66771ba7941015dfdce7cc4bcb80</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:02</sys_created_on>
+        <sys_id>b4527cd5db8828505001d602ca96192a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Look up Volume Groups">fe5b66771ba7941015dfdce7cc4bcb4a</action>
         <cid>adae2401-95e5-4877-b5cc-8b4126235eb4</cid>
@@ -4255,10 +4601,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:15</sys_created_on>
         <sys_id>725b66771ba7941015dfdce7cc4bcb53</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-06 10:55:15</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=725b66771ba7941015dfdce7cc4bcb53"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4269,14 +4615,19 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:15</sys_created_on>
         <sys_id>b65b66771ba7941015dfdce7cc4bcb65</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-06 10:55:15</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     var obs = new OracleBlockStorageUtils();
     obs.validateInputVariables(inputs, outputs);
-    obs.validateMandatoryVariables(inputs, ["compartmentid"]);
+    obs.validateMandatoryVariables(inputs, ["tenancyid"]);
     obs.maptoOutputFromInput(inputs, outputs, ["compartmentid"]);
+    if (inputs.tenancyid &amp;&amp; inputs.compartmentid) {
+        outputs.compartmentid = inputs.compartmentid;
+    } else {
+        outputs.compartmentid = inputs.tenancyid;
+    }
 })(inputs, outputs);</value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
@@ -4331,7 +4682,100 @@
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=725b66771ba7941015dfdce7cc4bcb53^sys_idNOT IN725b66771ba7941015dfdce7cc4bcb56"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tenancyid</field>
+        <id>725b66771ba7941015dfdce7cc4bcb53</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+        <sys_id>e8523cd5db8828505001d602ca9619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_725b66771ba7941015dfdce7cc4bcb53</table>
+        <value>{{action.tenancy_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=725b66771ba7941015dfdce7cc4bcb53^sys_idNOT IN24523cd5db8828505001d602ca9619bb,725b66771ba7941015dfdce7cc4bcb56"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tenancyid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>tenancyid</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Pre Processing">725b66771ba7941015dfdce7cc4bcb53</model>
+        <model_id>725b66771ba7941015dfdce7cc4bcb53</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_725b66771ba7941015dfdce7cc4bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+        <sys_id>24523cd5db8828505001d602ca9619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -4808,12 +5252,12 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_action_input action="delete_multiple" query="model=fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT INbe5b66771ba7941015dfdce7cc4bcb4b"/>
+    <sys_hub_action_input action="delete_multiple" query="model=fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT IN48523cd5db8828505001d602ca961969,5c523cd5db8828505001d602ca96199e"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=6512f22e-3e30-4009-a977-cb1c5d782998</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=1f3c9f32-9f4b-463c-b4b8-b161ad38287d</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -4837,7 +5281,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>compartment_id</element>
+        <element>tenancy_id</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -4845,7 +5289,7 @@
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>Compartment ID</label>
+        <label>Tenancy ID</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Look up Volume Groups">fe5b66771ba7941015dfdce7cc4bcb4a</model>
@@ -4869,8 +5313,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_action_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-06 10:55:15</sys_created_on>
-        <sys_id>be5b66771ba7941015dfdce7cc4bcb4b</sys_id>
+        <sys_created_on>2020-10-23 04:13:00</sys_created_on>
+        <sys_id>48523cd5db8828505001d602ca961969</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -4878,7 +5322,7 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-06 10:55:15</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4890,7 +5334,115 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
-    <sys_hub_action_output action="delete_multiple" query="model=fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT IN2f5b66771ba7941015dfdce7cc4bcbd0,3f5b66771ba7941015dfdce7cc4bcbda,846b66771ba7941015dfdce7cc4bcbe0,c43ab8f6db7710505001d602ca961972,e29eb183dbf750505001d602ca9619ec"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>dynamic=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=6512f22e-3e30-4009-a977-cb1c5d782998</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>compartment_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Compartment ID</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Look up Volume Groups">fe5b66771ba7941015dfdce7cc4bcb4a</model>
+        <model_id>fe5b66771ba7941015dfdce7cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_fe5b66771ba7941015dfdce7cc4bcb4a</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+        <sys_id>5c523cd5db8828505001d602ca96199e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5c523cd5db8828505001d602ca96199e^sys_idNOT IN18523cd5db8828505001d602ca9619a6"/>
+    <sys_hub_action_input_action_instance action="INSERT_OR_UPDATE">
+        <action_input display_value="">5c523cd5db8828505001d602ca96199e</action_input>
+        <action_inputs/>
+        <action_type display_value="Look up Compartments">5d1c61eedb0b1c105be372143996195e</action_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+        <sys_id>18523cd5db8828505001d602ca9619a6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 08:54:41</sys_updated_on>
+    </sys_hub_action_input_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=18523cd5db8828505001d602ca9619a6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_input_action_instance</document>
+        <document_key>18523cd5db8828505001d602ca9619a6</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+        <sys_id>50523cd5db8828505001d602ca9619a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
+        <value>{{action.tenancy_id}}</value>
+        <variable display_value="">251c61eedb0b1c105be3721439961963</variable>
+    </sys_variable_value>
+    <sys_hub_action_output action="delete_multiple" query="model=fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT IN2f5b66771ba7941015dfdce7cc4bcbd0,3f5b66771ba7941015dfdce7cc4bcbda,4d527cd5db8828505001d602ca961971,846b66771ba7941015dfdce7cc4bcbe0,c43ab8f6db7710505001d602ca961972"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -5061,6 +5613,89 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=cf14df90-9ed3-415a-a3f8-0e3aa10d515b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>responsebody</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Response Body</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Look up Volume Groups">fe5b66771ba7941015dfdce7cc4bcb4a</model>
+        <model_id>fe5b66771ba7941015dfdce7cc4bcb4a</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_fe5b66771ba7941015dfdce7cc4bcb4a</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:04</sys_created_on>
+        <sys_id>4d527cd5db8828505001d602ca961971</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
         <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=ccfdbaf2-0095-4c2a-a98e-e8a160319122</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
@@ -5144,7 +5779,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=Volume Group,child_name=Volume_Group,child_type=object,child_type_label=Object,child_uiUniqueId=8d71a5e5-aa32-4003-a5d1-9e66160766bf,co_type_name=FDe1fe97c7403f50505951855be905005b,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,sourceId=4c16ca9b-c23d-4ed9-a078-3c4cf282578e,sourceType=step,sourceUiUniqueId=73fbe23b-0a47-4405-963b-d30c24cb4e70,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=01ed45d0-528d-4d9a-99a6-33904afa607c</attributes>
+        <attributes>child_label=Volume Group,child_name=Volume_Group,child_type=object,child_type_label=Object,child_uiUniqueId=8d71a5e5-aa32-4003-a5d1-9e66160766bf,co_type_name=FDbac27d59a08c2850d81810f91139cddf,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,sourceId=4c16ca9b-c23d-4ed9-a078-3c4cf282578e,sourceType=step,sourceUiUniqueId=73fbe23b-0a47-4405-963b-d30c24cb4e70,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=01ed45d0-528d-4d9a-99a6-33904afa607c</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -5204,97 +5839,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-15 10:22:35</sys_created_on>
         <sys_id>c43ab8f6db7710505001d602ca961972</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 17:00:58</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_action_output>
-    <sys_hub_action_output action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=cf14df90-9ed3-415a-a3f8-0e3aa10d515b</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>responsebody</element>
-        <element_prototype/>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_link/>
-        <internal_type display_value="JSON">json</internal_type>
-        <label>Response Body</label>
-        <mandatory>false</mandatory>
-        <max_length>4000</max_length>
-        <model display_value="Look up Volume Groups">fe5b66771ba7941015dfdce7cc4bcb4a</model>
-        <model_id>fe5b66771ba7941015dfdce7cc4bcb4a</model_id>
-        <model_table>sys_hub_action_type_snapshot</model_table>
-        <name>var__m_sys_hub_action_output_fe5b66771ba7941015dfdce7cc4bcb4a</name>
-        <next_element/>
-        <order>5</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_action_output</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-16 09:59:58</sys_created_on>
-        <sys_id>e29eb183dbf750505001d602ca9619ec</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 16:50:44</sys_updated_on>
+        <sys_updated_on>2020-10-23 08:54:43</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -5323,10 +5875,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:16</sys_created_on>
         <sys_id>0b5b66771ba7941015dfdce7cc4bcb80</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:54</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:03</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=0b5b66771ba7941015dfdce7cc4bcb80"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5337,9 +5889,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:18</sys_created_on>
         <sys_id>6f5b66771ba7941015dfdce7cc4bcbcc</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:54</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:03</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     var data = new Array();
     var document;
@@ -5349,7 +5901,7 @@
         try {
             var response_json = JSON.parse(inputs.responseBody);
             outputs.volume_group_list = response_json;
-          	outputs.response_body = inputs.responseBody;
+            outputs.response_body = inputs.responseBody;
             for (var i = 0; i &lt; response_json.length; i++) {
                 var document = new Object();
                 document.label = response_json[i].displayName;
@@ -5366,8 +5918,7 @@
             outputs.documents = documents;
             outputs.status = "Success";
         }
-    } 
-  else {
+    } else {
         var errMsgs = new OracleBlockStorageErrorHandler().errorHandler(inputs.responseBody);
         outputs.error_message = errMsgs[0];
         outputs.status = errMsgs[1];
@@ -5601,7 +6152,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=0b5b66771ba7941015dfdce7cc4bcb80^sys_idNOT IN1b5b66771ba7941015dfdce7cc4bcb8f,2b5b66771ba7941015dfdce7cc4bcb99,9f0f124d1b33981015dfdce7cc4bcb0c,9f0f124d1b33981015dfdce7cc4bcb12,a75b66771ba7941015dfdce7cc4bcbc4"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=0b5b66771ba7941015dfdce7cc4bcb80^sys_idNOT IN1b5b66771ba7941015dfdce7cc4bcb8f,2b5b66771ba7941015dfdce7cc4bcb99,9f0f124d1b33981015dfdce7cc4bcb0c,a75b66771ba7941015dfdce7cc4bcbc4,b4527cd5db8828505001d602ca96192a"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -5768,7 +6319,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=Volume Group,child_name=Volume_Group,child_type=object,child_type_label=Object,child_uiUniqueId=8d71a5e5-aa32-4003-a5d1-9e66160766bf,co_type_name=FD5dfe97c7c03f5050cb9e19dfbe310d45,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=73fbe23b-0a47-4405-963b-d30c24cb4e70</attributes>
+        <attributes>child_label=Volume Group,child_name=Volume_Group,child_type=object,child_type_label=Object,child_uiUniqueId=8d71a5e5-aa32-4003-a5d1-9e66160766bf,co_type_name=FDeec27d59888c28500302b2c8ae7f1ec9,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=73fbe23b-0a47-4405-963b-d30c24cb4e70</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -5826,95 +6377,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-10 07:13:54</sys_created_on>
         <sys_id>9f0f124d1b33981015dfdce7cc4bcb0c</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 17:00:58</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_output>
-    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=json,uiTypeLabel=JSON,uiUniqueId=fb42243b-3469-473f-a120-572a2e2fb855</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>response_body</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="JSON">json</internal_type>
-        <label>response_body</label>
-        <mandatory>true</mandatory>
-        <max_length>4000</max_length>
-        <model display_value="Post Processing">0b5b66771ba7941015dfdce7cc4bcb80</model>
-        <model_id>0b5b66771ba7941015dfdce7cc4bcb80</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_output_0b5b66771ba7941015dfdce7cc4bcb80</name>
-        <next_element/>
-        <order>5</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-10 07:13:54</sys_created_on>
-        <sys_id>9f0f124d1b33981015dfdce7cc4bcb12</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-10 07:13:54</sys_updated_on>
+        <sys_updated_on>2020-10-23 08:54:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -6007,6 +6477,87 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=fb42243b-3469-473f-a120-572a2e2fb855</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>response_body</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>response_body</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Post Processing">0b5b66771ba7941015dfdce7cc4bcb80</model>
+        <model_id>0b5b66771ba7941015dfdce7cc4bcb80</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_0b5b66771ba7941015dfdce7cc4bcb80</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:02</sys_created_on>
+        <sys_id>b4527cd5db8828505001d602ca96192a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Look up Volume Groups">fe5b66771ba7941015dfdce7cc4bcb4a</action>
         <cid>adae2401-95e5-4877-b5cc-8b4126235eb4</cid>
@@ -6023,10 +6574,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:15</sys_created_on>
         <sys_id>725b66771ba7941015dfdce7cc4bcb53</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-06 10:55:15</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=725b66771ba7941015dfdce7cc4bcb53"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -6037,14 +6588,19 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2020-10-06 10:55:15</sys_created_on>
         <sys_id>b65b66771ba7941015dfdce7cc4bcb65</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-06 10:55:15</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
         <value>(function execute(inputs, outputs) {
     var obs = new OracleBlockStorageUtils();
     obs.validateInputVariables(inputs, outputs);
-    obs.validateMandatoryVariables(inputs, ["compartmentid"]);
+    obs.validateMandatoryVariables(inputs, ["tenancyid"]);
     obs.maptoOutputFromInput(inputs, outputs, ["compartmentid"]);
+    if (inputs.tenancyid &amp;&amp; inputs.compartmentid) {
+        outputs.compartmentid = inputs.compartmentid;
+    } else {
+        outputs.compartmentid = inputs.tenancyid;
+    }
 })(inputs, outputs);</value>
         <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
@@ -6099,7 +6655,100 @@
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=725b66771ba7941015dfdce7cc4bcb53^sys_idNOT IN725b66771ba7941015dfdce7cc4bcb56"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tenancyid</field>
+        <id>725b66771ba7941015dfdce7cc4bcb53</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+        <sys_id>e8523cd5db8828505001d602ca9619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_725b66771ba7941015dfdce7cc4bcb53</table>
+        <value>{{action.tenancy_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=725b66771ba7941015dfdce7cc4bcb53^sys_idNOT IN24523cd5db8828505001d602ca9619bb,725b66771ba7941015dfdce7cc4bcb56"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tenancyid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>tenancyid</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Pre Processing">725b66771ba7941015dfdce7cc4bcb53</model>
+        <model_id>725b66771ba7941015dfdce7cc4bcb53</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_725b66771ba7941015dfdce7cc4bcb53</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+        <sys_id>24523cd5db8828505001d602ca9619bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -6576,7 +7225,30 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT INbe5b66771ba7941015dfdce7cc4bcb50"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT IN48523cd5db8828505001d602ca96196e,94523cd5db8828505001d602ca9619a5"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>tenancy_id</element>
+        <help/>
+        <hint/>
+        <label>Tenancy ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_fe5b66771ba7941015dfdce7cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:00</sys_created_on>
+        <sys_id>48523cd5db8828505001d602ca96196e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>compartment_id</element>
         <help/>
@@ -6587,8 +7259,8 @@
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-06 10:55:15</sys_created_on>
-        <sys_id>be5b66771ba7941015dfdce7cc4bcb50</sys_id>
+        <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+        <sys_id>94523cd5db8828505001d602ca9619a5</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
@@ -6596,34 +7268,33 @@
         <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-06 10:55:15</sys_updated_on>
+        <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT IN6a9eb183dbf750505001d602ca9619f0,7b5b66771ba7941015dfdce7cc4bcbd9,843ab8f6db7710505001d602ca961977,886b66771ba7941015dfdce7cc4bcbfd,f35b66771ba7941015dfdce7cc4bcbdf"/>
-    <sys_documentation action="INSERT_OR_UPDATE">
-        <element>responsebody</element>
-        <help/>
-        <hint/>
-        <label>Response Body</label>
-        <language>en</language>
-        <name>var__m_sys_hub_action_output_fe5b66771ba7941015dfdce7cc4bcb4a</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2020-10-16 09:59:58</sys_created_on>
-        <sys_id>6a9eb183dbf750505001d602ca9619f0</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-10-16 09:59:58</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT IN10523cd5db8828505001d602ca9619a2"/>
+    <sys_choice field="compartment_id" table="var__m_sys_hub_action_input_fe5b66771ba7941015dfdce7cc4bcb4a">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>compartment_id</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_fe5b66771ba7941015dfdce7cc4bcb4a</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-10-23 04:13:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>10523cd5db8828505001d602ca9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-10-23 04:13:01</sys_updated_on>
+            <value/>
+        </sys_choice>
+    </sys_choice>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_fe5b66771ba7941015dfdce7cc4bcb4a^sys_idNOT IN7b5b66771ba7941015dfdce7cc4bcbd9,843ab8f6db7710505001d602ca961977,85527cd5db8828505001d602ca961976,886b66771ba7941015dfdce7cc4bcbfd,f35b66771ba7941015dfdce7cc4bcbdf"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>status</element>
         <help/>
@@ -6667,6 +7338,29 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-10-15 10:22:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>responsebody</element>
+        <help/>
+        <hint/>
+        <label>Response Body</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_fe5b66771ba7941015dfdce7cc4bcb4a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-10-23 04:13:04</sys_created_on>
+        <sys_id>85527cd5db8828505001d602ca961976</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Oracle Block Storage Spoke" source="sn_oci_bs_spoke">e4cd987ddb9750105001d602ca96195b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Oracle Block Storage Spoke">e4cd987ddb9750105001d602ca96195b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-10-23 04:13:04</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
